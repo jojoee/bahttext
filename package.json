@@ -34,7 +34,8 @@
     "ghooks": "1.3.2",
     "jest": "^21.0.1",
     "npm-run-all": "2.3.0",
-    "semantic-release": "^6.3.2"
+    "semantic-release": "^6.3.2",
+    "standard": "^10.0.3"
   },
   "jest": {
     "verbose": true,
