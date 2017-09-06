@@ -23,6 +23,5 @@ package-lock.json
 *.log
 
 # misc
-misc
 *.xlsx
 *.csv

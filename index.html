@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>bahttext.js</title>
+<link href='//fonts.googleapis.com/css?family=Raleway:400,300,600' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
+<link rel="stylesheet" href="//cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
+<style>
+table {
+  table-layout: fixed
+}
+td {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="row">
+    <h2>bahttext.js</h2>
+    <hr>
+
+    <input type="text" id="number" class="u-full-width" placeholder="number">
+    <div id="result" class="u-full-width"></div><br>
+    <button id="random">
+      Random
+    </button>
+    <hr>
+
+    <h4>Example</h4>
+    <table id="example" class="display" cellspacing="0" width="100%">
+      <thead>
+        <tr>
+          <th>category</th>
+          <th>case</th>
+          <th>number</th>
+          <th>thai</th>
+        </tr>
+      </thead>
+      <tfoot>
+        <tr>
+          <th>category</th>
+          <th>case</th>
+          <th>number</th>
+          <th>thai</th>
+        </tr>
+      </tfoot>
+    </table>
+  </div>
+</div>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="//cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/random-js/1.0.8/random.min.js"></script>
+<script src="./src/index.js"></script>
+<script>
+// random
+const r = new Random(Random.engines.mt19937().autoSeed())
+
+const $number = $('#number')
+const $result = $('#result')
+const $random = $('#random')
+const $exmaple = $('#example')
+
+function updateResult() {
+  const val = $number.val()
+  const num = parseFloat(val)
+  const html = bahttext(num)
+
+  $result.html(html)
+}
+
+function init() {
+  updateResult()
+}
+
+$(document).ready(function() {
+  init()
+
+  // number
+  $number.on('input', function(e) {
+    updateResult()
+  })
+
+  // random
+  $random.click(function(e) {
+    const num = r.real(0, Number.MAX_SAFE_INTEGER)
+    $number.val(num)
+    updateResult()
+  })
+
+  // example
+  $exmaple.DataTable({
+    paging: false,
+    searching: false,
+    ordering: false,
+    ajax: {
+      url: 'misc/test.json',
+      dataSrc: ''
+    },
+    columns: [
+      {
+        data: 'category',
+        width: '10%'
+      },
+      {
+        data: 'case',
+        width: '16%'
+      },
+      {
+        data: 'number',
+        width: '22%'
+      },
+      {
+        data: 'thai'
+      }
+    ]
+  })
+})
+</script>
+</body>
+</html>

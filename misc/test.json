@@ -1,0 +1,379 @@
+[{
+  "category": "digit",
+  "case": "1, zero",
+  "number": "0",
+  "thai": "ศูนย์บาทถ้วน"
+},
+{
+  "category": "digit",
+  "case": "1",
+  "number": "1",
+  "thai": "หนึ่งบาทถ้วน"
+},
+{
+  "category": "digit",
+  "case": "1",
+  "number": "2",
+  "thai": "สองบาทถ้วน"
+},
+{
+  "category": "digit",
+  "case": "1",
+  "number": "3",
+  "thai": "สามบาทถ้วน"
+},
+{
+  "category": "digit",
+  "case": "1",
+  "number": "4",
+  "thai": "สี่บาทถ้วน"
+},
+{
+  "category": "digit",
+  "case": "1",
+  "number": "5",
+  "thai": "ห้าบาทถ้วน"
+},
+{
+  "category": "digit",
+  "case": "1",
+  "number": "6",
+  "thai": "หกบาทถ้วน"
+},
+{
+  "category": "digit",
+  "case": "1",
+  "number": "7",
+  "thai": "เจ็ดบาทถ้วน"
+},
+{
+  "category": "digit",
+  "case": "1",
+  "number": "8",
+  "thai": "แปดบาทถ้วน"
+},
+{
+  "category": "digit",
+  "case": "1",
+  "number": "9",
+  "thai": "เก้าบาทถ้วน"
+},
+{
+  "category": "digit",
+  "case": "2",
+  "number": "37",
+  "thai": "สามสิบเจ็ดบาทถ้วน"
+},
+{
+  "category": "digit",
+  "case": "2",
+  "number": "48",
+  "thai": "สี่สิบแปดบาทถ้วน"
+},
+{
+  "category": "digit",
+  "case": "3",
+  "number": "232",
+  "thai": "สองร้อยสามสิบสองบาทถ้วน"
+},
+{
+  "category": "digit",
+  "case": "4",
+  "number": "3333",
+  "thai": "สามพันสามร้อยสามสิบสามบาทถ้วน"
+},
+{
+  "category": "digit",
+  "case": "5",
+  "number": "44444",
+  "thai": "สี่หมื่นสี่พันสี่ร้อยสี่สิบสี่บาทถ้วน"
+},
+{
+  "category": "digit",
+  "case": "6",
+  "number": "555555",
+  "thai": "ห้าแสนห้าหมื่นห้าพันห้าร้อยห้าสิบห้าบาทถ้วน"
+},
+{
+  "category": "digit",
+  "case": "7",
+  "number": "6666666",
+  "thai": "หกล้านหกแสนหกหมื่นหกพันหกร้อยหกสิบหกบาทถ้วน"
+},
+{
+  "category": "digit",
+  "case": "8",
+  "number": "77777777",
+  "thai": "เจ็ดสิบเจ็ดล้านเจ็ดแสนเจ็ดหมื่นเจ็ดพันเจ็ดร้อยเจ็ดสิบเจ็ดบาทถ้วน"
+},
+{
+  "category": "digit",
+  "case": "9",
+  "number": "888888888",
+  "thai": "แปดร้อยแปดสิบแปดล้านแปดแสนแปดหมื่นแปดพันแปดร้อยแปดสิบแปดบาทถ้วน"
+},
+{
+  "category": "digit",
+  "case": "10",
+  "number": "9999999999",
+  "thai": "เก้าพันเก้าร้อยเก้าสิบเก้าล้านเก้าแสนเก้าหมื่นเก้าพันเก้าร้อยเก้าสิบเก้าบาทถ้วน"
+},
+{
+  "category": "digit",
+  "case": "11",
+  "number": "12345678901",
+  "thai": "หนึ่งหมื่นสองพันสามร้อยสี่สิบห้าล้านหกแสนเจ็ดหมื่นแปดพันเก้าร้อยเอ็ดบาทถ้วน"
+},
+{
+  "category": "digit",
+  "case": "12",
+  "number": "123456789012",
+  "thai": "หนึ่งแสนสองหมื่นสามพันสี่ร้อยห้าสิบหกล้านเจ็ดแสนแปดหมื่นเก้าพันสิบสองบาทถ้วน"
+},
+{
+  "category": "digit",
+  "case": "13",
+  "number": "1234567890123",
+  "thai": "หนึ่งล้านสองแสนสามหมื่นสี่พันห้าร้อยหกสิบเจ็ดล้านแปดแสนเก้าหมื่นหนึ่งร้อยยี่สิบสามบาทถ้วน"
+},
+{
+  "category": "digit",
+  "case": "14",
+  "number": "12345678901234",
+  "thai": "สิบสองล้านสามแสนสี่หมื่นห้าพันหกร้อยเจ็ดสิบแปดล้านเก้าแสนหนึ่งพันสองร้อยสามสิบสี่บาทถ้วน"
+},
+{
+  "category": "digit",
+  "case": "15",
+  "number": "123456789012345",
+  "thai": "หนึ่งร้อยยี่สิบสามล้านสี่แสนห้าหมื่นหกพันเจ็ดร้อยแปดสิบเก้าล้านหนึ่งหมื่นสองพันสามร้อยสี่สิบห้าบาทถ้วน"
+},
+{
+  "category": "digit",
+  "case": "16, not more than Number.MAX_SAFE_INTEGER",
+  "number": "1234567890123450",
+  "thai": "หนึ่งพันสองร้อยสามสิบสี่ล้านห้าแสนหกหมื่นเจ็ดพันแปดร้อยเก้าสิบล้านหนึ่งแสนสองหมื่นสามพันสี่ร้อยห้าสิบบาทถ้วน"
+},
+{
+  "category": "digit",
+  "case": "16, more than Number.MAX_SAFE_INTEGER",
+  "number": "9007199254750990",
+  "thai": "ศูนย์บาทถ้วน"
+},
+{
+  "category": "digit",
+  "case": "more than 16",
+  "number": "12345678901234500",
+  "thai": "ศูนย์บาทถ้วน"
+},
+{
+  "category": "digit",
+  "case": "more than 16",
+  "number": "123456789012345000",
+  "thai": "ศูนย์บาทถ้วน"
+},
+{
+  "category": "digit",
+  "case": "more than 16",
+  "number": "1234567890123450000",
+  "thai": "ศูนย์บาทถ้วน"
+},
+{
+  "category": "digit",
+  "case": "more than 16",
+  "number": "123456789012345000000",
+  "thai": "ศูนย์บาทถ้วน"
+},
+{
+  "category": "grammar",
+  "case": "end with 1 (more than 10)",
+  "number": "11",
+  "thai": "สิบเอ็ดบาทถ้วน"
+},
+{
+  "category": "grammar",
+  "case": "end with 1 (more than 10)",
+  "number": "201",
+  "thai": "สองร้อยเอ็ดบาทถ้วน"
+},
+{
+  "category": "grammar",
+  "case": "end with 1 (more than 10)",
+  "number": "3061.21",
+  "thai": "สามพันหกสิบเอ็ดบาทยี่สิบเอ็ดสตางค์"
+},
+{
+  "category": "grammar",
+  "case": "end with 1 (more than 10)",
+  "number": "456011.71",
+  "thai": "สี่แสนห้าหมื่นหกพันสิบเอ็ดบาทเจ็ดสิบเอ็ดสตางค์"
+},
+{
+  "category": "grammar",
+  "case": "end with 1x",
+  "number": "14",
+  "thai": "สิบสี่บาทถ้วน"
+},
+{
+  "category": "grammar",
+  "case": "end with 1x",
+  "number": "40019",
+  "thai": "สี่หมื่นสิบเก้าบาทถ้วน"
+},
+{
+  "category": "grammar",
+  "case": "end with 1x",
+  "number": "317.10",
+  "thai": "สามร้อยสิบเจ็ดบาทสิบสตางค์"
+},
+{
+  "category": "grammar",
+  "case": "end with 1x",
+  "number": "40019.17",
+  "thai": "สี่หมื่นสิบเก้าบาทสิบเจ็ดสตางค์"
+},
+{
+  "category": "grammar",
+  "case": "end with 2x",
+  "number": "22",
+  "thai": "ยี่สิบสองบาทถ้วน"
+},
+{
+  "category": "grammar",
+  "case": "end with 2x",
+  "number": "5723",
+  "thai": "ห้าพันเจ็ดร้อยยี่สิบสามบาทถ้วน"
+},
+{
+  "category": "grammar",
+  "case": "end with 2x",
+  "number": "57.23",
+  "thai": "ห้าสิบเจ็ดบาทยี่สิบสามสตางค์"
+},
+{
+  "category": "grammar",
+  "case": "end with 2x",
+  "number": "422.26",
+  "thai": "สี่ร้อยยี่สิบสองบาทยี่สิบหกสตางค์"
+},
+{
+  "category": "decimals",
+  "case": "general",
+  "number": "1.01",
+  "thai": "หนึ่งบาทหนึ่งสตางค์"
+},
+{
+  "category": "decimals",
+  "case": "general",
+  "number": "1.02",
+  "thai": "หนึ่งบาทสองสตางค์"
+},
+{
+  "category": "decimals",
+  "case": "general",
+  "number": "1.03",
+  "thai": "หนึ่งบาทสามสตางค์"
+},
+{
+  "category": "decimals",
+  "case": "general",
+  "number": "1.04",
+  "thai": "หนึ่งบาทสี่สตางค์"
+},
+{
+  "category": "decimals",
+  "case": "general",
+  "number": "1.05",
+  "thai": "หนึ่งบาทห้าสตางค์"
+},
+{
+  "category": "decimals",
+  "case": "general",
+  "number": "1.06",
+  "thai": "หนึ่งบาทหกสตางค์"
+},
+{
+  "category": "decimals",
+  "case": "general",
+  "number": "1.07",
+  "thai": "หนึ่งบาทเจ็ดสตางค์"
+},
+{
+  "category": "decimals",
+  "case": "general",
+  "number": "1.08",
+  "thai": "หนึ่งบาทแปดสตางค์"
+},
+{
+  "category": "decimals",
+  "case": "general",
+  "number": "1.09",
+  "thai": "หนึ่งบาทเก้าสตางค์"
+},
+{
+  "category": "decimals",
+  "case": "general",
+  "number": "32.23",
+  "thai": "สามสิบสองบาทยี่สิบสามสตางค์"
+},
+{
+  "category": "decimals",
+  "case": "general",
+  "number": "474.45",
+  "thai": "สี่ร้อยเจ็ดสิบสี่บาทสี่สิบห้าสตางค์"
+},
+{
+  "category": "decimals",
+  "case": "general",
+  "number": "5789.67",
+  "thai": "ห้าพันเจ็ดร้อยแปดสิบเก้าบาทหกสิบเจ็ดสตางค์"
+},
+{
+  "category": "decimals",
+  "case": "general",
+  "number": "63147.89",
+  "thai": "หกหมื่นสามพันหนึ่งร้อยสี่สิบเจ็ดบาทแปดสิบเก้าสตางค์"
+},
+{
+  "category": "decimals",
+  "case": "more than 2 decimals, using 2 digits",
+  "number": "25.1230",
+  "thai": "ยี่สิบห้าบาทสิบสองสตางค์"
+},
+{
+  "category": "decimals",
+  "case": "more than 2 decimals, using 2 digits",
+  "number": "345.2345",
+  "thai": "สามร้อยสี่สิบห้าบาทยี่สิบสามสตางค์"
+},
+{
+  "category": "decimals",
+  "case": "more than 2 decimals, using 2 digits",
+  "number": "5678.4567",
+  "thai": "ห้าพันหกร้อยเจ็ดสิบแปดบาทสี่สิบหกสตางค์"
+},
+{
+  "category": "decimals",
+  "case": "not more than 1",
+  "number": "0.25",
+  "thai": "ยี่สิบห้าสตางค์"
+},
+{
+  "category": "decimals",
+  "case": "not more than 1",
+  "number": "0.36",
+  "thai": "สามสิบหกสตางค์"
+},
+{
+  "category": "decimals",
+  "case": "not more than 1",
+  "number": "0.69",
+  "thai": "หกสิบเก้าสตางค์"
+},
+{
+  "category": "misc",
+  "case": "invalid number",
+  "number": "invalid number",
+  "thai": "ศูนย์บาทถ้วน"
+}
+]
