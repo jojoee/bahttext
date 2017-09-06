@@ -1,0 +1,21 @@
+{
+  "name": "bahttext",
+  "homepage": "https://github.com/jojoee/bahttext",
+  "authors": [
+    "Nathachai Thongniran <inid3a@gmail.com>"
+  ],
+  "description": "Change number to Thai pronunciation string",
+  "main": "src/index.js",
+  "keywords": [
+    "baht",
+    "thai"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

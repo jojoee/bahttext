@@ -1,0 +1,57 @@
+{
+  "name": "bahttext",
+  "version": "1.0.0",
+  "description": "Change number to Thai pronunciation string",
+  "main": "src/index.js",
+  "scripts": {
+    "jest": "jest",
+    "jest.watch": "npm run test -- --watch",
+    "commit": "git-cz",
+    "coverage.check": "jest --coverage",
+    "coverage.report": "cat ./coverage/lcov.info | codecov",
+    "standard": "standard",
+    "validate": "npm run standard && npm run coverage.check"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://jojoee@github.com/jojoee/bahttext.git"
+  },
+  "keywords": [
+    "baht",
+    "text"
+  ],
+  "author": "Nathachai Thongniran <inid3a@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jojoee/bahttext/issues"
+  },
+  "homepage": "https://github.com/jojoee/bahttext#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "codecov": "^2.3.0",
+    "commitizen": "2.8.5",
+    "cz-conventional-changelog": "1.1.6",
+    "ghooks": "1.3.2",
+    "jest": "^21.0.1",
+    "npm-run-all": "2.3.0",
+    "semantic-release": "^6.3.2"
+  },
+  "jest": {
+    "verbose": true,
+    "testMatch": [
+      "**/*.test.js"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 60,
+        "functions": 60,
+        "lines": 60,
+        "statements": 60
+      }
+    }
+  },
+  "standard": {
+    "verbose": true,
+    "env": "jest"
+  }
+}
