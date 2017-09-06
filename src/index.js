@@ -65,6 +65,17 @@ function num2Word (nums) {
 function grammarFix (str) {
   let result = str
 
+  // "สิบ"
+  result = result.replace('หนึ่งสิบ', 'สิบ')
+  // "ยี่สิบ"
+  result = result.replace('สองสิบ', 'ยี่สิบ')
+  // "เอ็ด"
+  const neungLen = 5
+  if (result.length > neungLen &&
+    result.length - result.lastIndexOf('หนึ่ง') === neungLen) {
+    result = result.substr(0, result.length - neungLen) + 'เอ็ด'
+  }
+
   return result
 }
 
