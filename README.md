@@ -34,8 +34,6 @@ bahttext(63147.89)
 - [ ] Remove duplication between test code and test-case-csv file
 - [x] [Demo page](https://jojoee.github.io/bahttext/)
 - [ ] Support negative number
-- [ ] Automatically generate `misc/test.json` from `xlsx` file
-- [ ] Lint on `index.html`
 
 ## Contribute for owner
 
