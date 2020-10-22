@@ -1,4 +1,4 @@
-const bahttext = require('./index')
+const { bahttext } = require('./index')
 const defaultResult = 'ศูนย์บาทถ้วน'
 jest.autoMockOff()
 
