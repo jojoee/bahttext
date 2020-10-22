@@ -43,6 +43,7 @@ bahttext(63147.89)
 - [ ] Remove duplication between test code and test-case-csv file
 - [x] [Demo page](https://jojoee.github.io/bahttext/)
 - [ ] Support negative number
+- [ ] Fix semantic-release
 
 ## Contribute for owner
 
