@@ -150,5 +150,7 @@ function bahttext (num) {
 
 if (typeof module !== 'undefined' &&
   module.exports != null) {
-  module.exports = bahttext
+  module.exports = {
+    bahttext
+  }
 }

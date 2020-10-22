@@ -15,7 +15,7 @@
 ```
 // ติดตั้งด้วย npm
 npm install bahttext
-const bahttext = require('bahttext')
+const { bahttext } = require('bahttext')
 
 // ติดตั้งด้วย Bower
 bower install bahttext
