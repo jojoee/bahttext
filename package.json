@@ -8,10 +8,8 @@
     "jest.watch": "npm run test -- --watch",
     "commit": "git-cz",
     "coverage.check": "jest --coverage",
-    "coverage.report": "cat ./coverage/lcov.info | codecov",
     "semantic-release": "semantic-release",
-    "standard": "standard",
-    "validate": "npm run standard && npm run coverage.check"
+    "standard": "standard"
   },
   "config": {
     "ghooks": {
