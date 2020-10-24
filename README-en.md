@@ -13,13 +13,20 @@ Change number to Thai pronunciation string, test against [Microsoft Office's BAH
 ## Installation
 
 ```
-// npm
+// CommonJS
 npm install bahttext
-const bahttext = require('bahttext')
+const { bahttext } = require('bahttext')
 
 // Bower
 bower install bahttext
 <script src="bower_components/bahttext/src/index.js"></script>
+
+// githack
+<script src="https://raw.githack.com/jojoee/bahttext/master/src/index.js"></script>
+
+// ES6
+npm install bahttext
+import { bahttext } from "bahttext"
 ```
 
 ## Example usage
@@ -36,6 +43,7 @@ bahttext(63147.89)
 - [ ] Remove duplication between test code and test-case-csv file
 - [x] [Demo page](https://jojoee.github.io/bahttext/)
 - [ ] Support negative number
+- [ ] Fix semantic-release
 
 ## Contribute for owner
 

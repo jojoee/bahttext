@@ -13,13 +13,20 @@
 ## ติดตั้ง
 
 ```
-// ติดตั้งด้วย npm
+// ติดตั้งด้วย CommonJS
 npm install bahttext
-const bahttext = require('bahttext')
+const { bahttext } = require('bahttext')
 
 // ติดตั้งด้วย Bower
 bower install bahttext
 <script src="bower_components/bahttext/src/index.js"></script>
+
+// ติดตั้งด้วย githack
+<script src="https://raw.githack.com/jojoee/bahttext/master/src/index.js"></script>
+
+// ติดตั้งด้วย ES6
+npm install bahttext
+import { bahttext } from "bahttext"
 ```
 
 ## ตัวอย่างการใช้งาน
@@ -36,6 +43,7 @@ bahttext(63147.89)
 - [ ] ลดการซ้ำซ้อนของการเขียน ระหว่าง code และ ไฟล์ csv ในการทำการทดสอบ
 - [x] [หน้าตัวอย่างการใช้งาน](https://jojoee.github.io/bahttext/)
 - [ ] สนับสนุนการใช้งานกับตัวเลขติดลบ
+- [ ] แก้ไข semantic-release
 
 ## ร่วมพัฒนา
 

@@ -1,4 +1,4 @@
-const bahttext = require('./index')
+const { bahttext } = require('./index')
 const defaultResult = 'ศูนย์บาทถ้วน'
 jest.autoMockOff()
 
@@ -83,6 +83,7 @@ describe('digit', () => {
   })
 
   test('16 digits, more than Number.MAX_SAFE_INTEGER', () => {
+    // eslint-disable-next-line
     expect(bahttext(9007199254750991)).toBe(defaultResult)
   })
 
