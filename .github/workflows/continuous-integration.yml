@@ -20,5 +20,4 @@ jobs:
     - name: Linting with Standard.js
       run: npm run standard
     - name: Test and test coverage
-      run: npm run standard
       run: run coverage.check
