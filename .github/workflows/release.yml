@@ -3,7 +3,7 @@ name: release
 on:
   workflow_run:
     workflows: ["continuous integration"]
-    branches: [main]
+    branches: [master]
     types: 
     - completed
 
