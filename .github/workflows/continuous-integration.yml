@@ -11,14 +11,20 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v2
+
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
+
     - name: Install dependencies
       run: npm install
+
     - name: Linting with Standard.js
       run: npm run standard
+
     - name: Test and test coverage
       run: npm run coverage.check
-    - uses: codecov/codecov-action@v1
+
+    - name: Upload coverage to Codecov
+      uses: codecov/codecov-action@v1
