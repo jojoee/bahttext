@@ -37,7 +37,6 @@
   "homepage": "https://github.com/jojoee/bahttext#readme",
   "dependencies": {},
   "devDependencies": {
-    "codecov": "^3.8.0",
     "commitizen": "4.2.2",
     "cz-conventional-changelog": "3.3.0",
     "ghooks": "2.0.4",
