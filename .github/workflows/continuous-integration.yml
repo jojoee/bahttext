@@ -21,3 +21,6 @@ jobs:
       run: npm run standard
     - name: Test and test coverage
       run: npm run coverage.check
+    - uses: codecov/codecov-action@v1
+      with:
+        verbose: true
