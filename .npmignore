@@ -1,0 +1,14 @@
+# IDE & editor
+.idea
+!.vscode
+.editorconfig
+
+# test
+codecov.yaml
+misc
+
+# CI
+.github
+
+# example
+example
