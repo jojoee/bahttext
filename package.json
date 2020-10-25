@@ -3,6 +3,7 @@
   "version": "0.0.0-development",
   "description": "Change number to Thai pronunciation string",
   "main": "src/index.js",
+  "typings": "src/index.js",
   "scripts": {
     "jest": "jest",
     "jest.watch": "npm run test -- --watch",
@@ -24,8 +25,12 @@
     "url": "https://github.com/jojoee/bahttext.git"
   },
   "keywords": [
+    "thai",
     "baht",
-    "text"
+    "text",
+    "number",
+    "convert",
+    "thai baht"
   ],
   "author": "Nathachai Thongniran <inid3a@gmail.com>",
   "license": "MIT",
