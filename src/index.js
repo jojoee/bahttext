@@ -153,4 +153,7 @@ if (typeof module !== 'undefined' &&
   module.exports = {
     bahttext
   }
+  exports.default = {
+    bahttext
+  }
 }
