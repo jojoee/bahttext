@@ -1,10 +1,14 @@
 # bahttext
 
-[![Travis](https://img.shields.io/travis/jojoee/bahttext.svg)](https://travis-ci.org/jojoee/bahttext)
 [![Codecov](https://img.shields.io/codecov/c/github/jojoee/bahttext.svg)](https://codecov.io/github/jojoee/bahttext)
 [![Version - npm](https://img.shields.io/npm/v/bahttext.svg)](https://www.npmjs.com/package/bahttext)
 [![License - npm](https://img.shields.io/npm/l/bahttext.svg)](http://opensource.org/licenses/MIT)
 [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg?style=flat-square)](https://github.com/semantic-release/semantic-release) [![Greenkeeper badge](https://badges.greenkeeper.io/jojoee/bahttext.svg)](https://greenkeeper.io/)
+
+![continuous integration](https://github.com/jojoee/bahttext/workflows/continuous%20integration/badge.svg?branch=master)
+![release](https://github.com/jojoee/bahttext/workflows/release/badge.svg?branch=master)
+![runnable](https://github.com/jojoee/bahttext/workflows/runnable/badge.svg?branch=master)
+![runnable old node](https://github.com/jojoee/bahttext/workflows/runnable%20old%20node/badge.svg?branch=master)
 
 Language: [ไทย](https://github.com/jojoee/bahttext/blob/master/README.md), [English](https://github.com/jojoee/bahttext/blob/master/README-en.md)
 
