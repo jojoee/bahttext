@@ -1,6 +1,10 @@
 name: runnable
 on: [push]
 
+defaults:
+  run:
+    working-directory: example
+
 jobs:
   runnable:
     runs-on: ubuntu-latest
@@ -31,9 +35,7 @@ jobs:
         npm install -g ts-node
 
     - name: Run with CommonJS
-      run: node example/commonjs.js
+      run: node commonjs.js
 
     - name: Run with ES6
-      run: |
-        cd example
-        ts-node es6.ts
+      run: ts-node es6.ts
