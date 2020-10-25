@@ -1,0 +1,39 @@
+name: runnable
+on: [push]
+
+jobs:
+  runnable:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [12.x]
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+
+    - name: Cache dependencies
+      uses: actions/cache@v2
+      with:
+        path: |
+          **/node_modules
+        key: ${{ runner.os }}-${{ hashFiles('**/package-lock.json') }}
+
+    - name: Install dependencies
+      run: |
+        npm install
+        npm install -g typescript
+        npm install -g ts-node
+
+    - name: Run with CommonJS
+      run: node example/commonjs.js
+
+    - name: Run with ES6
+      run: |
+        cd example
+        ts-node es6.ts
