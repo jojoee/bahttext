@@ -42,21 +42,14 @@ bahttext(63147.89)
 
 ## ฟีเจอร์
 - [x] สามารถใช้งานได้ทุก เบราว์เซอร์
+- [x] สามารถใช้งานได้ตั้งแต่ Node.js version 6-12
+- [x] 0 Dependencies
 - [x] ทำการทดสอบแบบ unit test
 - [ ] ทดสอบบนเบราว์เซอร์ ในแต่ละ เวอร์ชั่น
 - [ ] ลดการซ้ำซ้อนของการเขียน ระหว่าง code และ ไฟล์ csv ในการทำการทดสอบ
 - [x] [หน้าตัวอย่างการใช้งาน](https://jojoee.github.io/bahttext/)
 - [ ] สนับสนุนการใช้งานกับตัวเลขติดลบ
-- [ ] แก้ไข semantic-release
-
-## ร่วมพัฒนา
-
-```
-$ npm install -g semantic-release-cli
-$ semantic-release-cli setup
-
-Using above command to setup "semantic-release"
-```
+- [x] แก้ไข semantic-release
 
 ## อ้างอิง
 - [Microsoft Office's BAHTTEXT function](https://support.office.com/en-us/article/BAHTTEXT-function-5ba4d0b4-abd3-4325-8d22-7a92d59aab9c)

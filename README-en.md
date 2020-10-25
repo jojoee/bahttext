@@ -42,21 +42,14 @@ bahttext(63147.89)
 
 ## Note
 - [x] Compatible with all browsers
+- [x] Node.js version support: 6-12
+- [x] 0 Dependencies
 - [x] Unit test
 - [ ] Browser compatibility test
 - [ ] Remove duplication between test code and test-case-csv file
 - [x] [Demo page](https://jojoee.github.io/bahttext/)
 - [ ] Support negative number
-- [ ] Fix semantic-release
-
-## Contribute for owner
-
-```
-$ npm install -g semantic-release-cli
-$ semantic-release-cli setup
-
-Using above command to setup "semantic-release"
-```
+- [x] Fix semantic-release
 
 ## Reference
 - [Microsoft Office's BAHTTEXT function](https://support.office.com/en-us/article/BAHTTEXT-function-5ba4d0b4-abd3-4325-8d22-7a92d59aab9c)
