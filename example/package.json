@@ -2,6 +2,6 @@
   "name": "bahttext-example",
   "main": "example.js",
   "dependencies": {
-    "bahttext": "^2.0.1"
+    "bahttext": "^2.0.2"
   }
 }
