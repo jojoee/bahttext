@@ -10,7 +10,8 @@
     "commit": "git-cz",
     "coverage.check": "jest --coverage",
     "semantic-release": "semantic-release",
-    "standard": "standard"
+    "standard": "standard",
+    "validate": "npm run standard && npm run coverage.check"
   },
   "config": {
     "ghooks": {
