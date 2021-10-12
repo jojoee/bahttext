@@ -124,7 +124,7 @@ describe('grammar', () => {
     expect(bahttext(10056518)).toBe('สิบล้านห้าหมื่นหกพันห้าร้อยสิบแปดบาทถ้วน')
   })
 
-  test('multi occurrence of 1x', () => {
+  test('multi occurrence of 2x', () => {
     expect(bahttext(20056528)).toBe('ยี่สิบล้านห้าหมื่นหกพันห้าร้อยยี่สิบแปดบาทถ้วน')
   })
 })
