@@ -257,6 +257,18 @@
   "thai": "สี่ร้อยยี่สิบสองบาทยี่สิบหกสตางค์"
 },
 {
+  "category": "grammar",
+  "case": "multi occurrence of 1x",
+  "number": "10056518",
+  "thai": "สิบล้านห้าหมื่นหกพันห้าร้อยสิบแปดบาทถ้วน"
+},
+{
+  "category": "grammar",
+  "case": "multi occurrence of 2x",
+  "number": "20056528",
+  "thai": "ยี่สิบล้านห้าหมื่นหกพันห้าร้อยยี่สิบแปดบาทถ้วน"
+},
+{
   "category": "decimals",
   "case": "general",
   "number": "1.01",
