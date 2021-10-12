@@ -66,9 +66,9 @@ function grammarFix (str) {
   let result = str
 
   // "สิบ"
-  result = result.replace('หนึ่งสิบ', 'สิบ')
+  result = result.replace(/หนึ่งสิบ/g, 'สิบ')
   // "ยี่สิบ"
-  result = result.replace('สองสิบ', 'ยี่สิบ')
+  result = result.replace(/สองสิบ/g, 'ยี่สิบ')
   // "เอ็ด"
   const neungLen = 5
   if (result.length > neungLen &&

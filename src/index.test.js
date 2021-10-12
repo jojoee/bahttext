@@ -119,6 +119,14 @@ describe('grammar', () => {
     expect(bahttext(57.23)).toBe('ห้าสิบเจ็ดบาทยี่สิบสามสตางค์')
     expect(bahttext(422.26)).toBe('สี่ร้อยยี่สิบสองบาทยี่สิบหกสตางค์')
   })
+
+  test('multi occurrence of 1x', () => {
+    expect(bahttext(10056518)).toBe('สิบล้านห้าหมื่นหกพันห้าร้อยสิบแปดบาทถ้วน')
+  })
+
+  test('multi occurrence of 1x', () => {
+    expect(bahttext(20056528)).toBe('ยี่สิบล้านห้าหมื่นหกพันห้าร้อยยี่สิบแปดบาทถ้วน')
+  })
 })
 
 describe('decimals', () => {
