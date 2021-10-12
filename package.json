@@ -6,7 +6,7 @@
   "typings": "src/index.js",
   "scripts": {
     "jest": "jest",
-    "jest.watch": "npm run test -- --watch",
+    "jest.watch": "jest --watch",
     "commit": "git-cz",
     "coverage.check": "jest --coverage",
     "semantic-release": "semantic-release",

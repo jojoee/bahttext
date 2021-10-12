@@ -1,6 +1,6 @@
 # IDE & editor
 .idea
-!.vscode
+.vscode
 
 # dependency
 node_modules
