@@ -39,7 +39,7 @@ td {
           <th>category</th>
           <th>case</th>
           <th>number</th>
-          <th>thai</th>
+          <th>text</th>
         </tr>
       </thead>
       <tfoot>
@@ -47,7 +47,7 @@ td {
           <th>category</th>
           <th>case</th>
           <th>number</th>
-          <th>thai</th>
+          <th>text</th>
         </tr>
       </tfoot>
     </table>
@@ -88,7 +88,7 @@ $(document).ready(function() {
 
   // random
   $random.click(function(e) {
-    const num = r.real(0, Number.MAX_SAFE_INTEGER)
+    const num = r.real(Number.MIN_SAFE_INTEGER, Number.MAX_SAFE_INTEGER)
     $number.val(num)
     updateResult()
   })
@@ -99,7 +99,7 @@ $(document).ready(function() {
     searching: false,
     ordering: false,
     ajax: {
-      url: 'misc/test.json',
+      url: 'misc/testcases.json',
       dataSrc: ''
     },
     columns: [
@@ -116,7 +116,7 @@ $(document).ready(function() {
         width: '22%'
       },
       {
-        data: 'thai'
+        data: 'text'
       }
     ]
   })
