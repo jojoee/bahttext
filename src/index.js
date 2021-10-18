@@ -1,35 +1,6 @@
-/*
-step:
-1. validate
-2. sanitize
-3. split
-4. proceed
-5. grammar
-6. combine
-*/
-
 const defaultResult = 'ศูนย์บาทถ้วน'
-const singleUnitStrs = [
-  '',
-  'หนึ่ง',
-  'สอง',
-  'สาม',
-  'สี่',
-  'ห้า',
-  'หก',
-  'เจ็ด',
-  'แปด',
-  'เก้า'
-]
-const placeNameStrs = [
-  '',
-  'สิบ',
-  'ร้อย',
-  'พัน',
-  'หมื่น',
-  'แสน',
-  'ล้าน'
-]
+const singleUnitStrs = ['', 'หนึ่ง', 'สอง', 'สาม', 'สี่', 'ห้า', 'หก', 'เจ็ด', 'แปด', 'เก้า']
+const placeNameStrs = ['', 'สิบ', 'ร้อย', 'พัน', 'หมื่น', 'แสน', 'ล้าน']
 
 /**
  * @param {number[]} nums
@@ -116,30 +87,24 @@ function bahttext (num) {
   // set
   let result = defaultResult
 
-  // 3. split: baht and satang
-  // e.g. 432.21 >> 432, 21
-  // @todo optimize
-  /** @type {string} */
+  // split baht and satang e.g. 432.214567 >> 432, 21
   const bahtStr = Math.floor(num).toString()
   /** @type {string} */
   const satangStr = Math.round(num % 1 * 100).toString()
-
-  // 3. split: convert number array
-  // @todo optimize it
   /** @type {number[]} */
   const bahtArr = Array.from(bahtStr).map(Number)
   /** @type {number[]} */
   const satangArr = Array.from(satangStr).map(Number)
 
-  // 4. proceed
+  // proceed
   let baht = num2Word(bahtArr)
   let satang = num2Word(satangArr)
 
-  // 5. grammar
+  // grammar
   baht = grammarFix(baht)
   satang = grammarFix(satang)
 
-  // 6. combine
+  // combine
   result = combine(baht, satang)
 
   return result
