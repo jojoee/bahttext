@@ -104,14 +104,17 @@ function combine (baht, satang) {
  * @returns {string}
  */
 function bahttext (num) {
+  // no null
+  if (!num) return defaultResult
+  // no boolean
+  if (typeof num === 'boolean') return defaultResult
+  // must be number only
+  if (isNaN(Number(num))) return defaultResult
+  // no more than Number.MAX_SAFE_INTEGER
+  if (num >= Number.MAX_SAFE_INTEGER) return defaultResult
+
+  // set
   let result = defaultResult
-
-  // 1. validate: invalid number
-  if (isNaN(num)) return result
-  // 1. validate: more than
-  if (num >= Number.MAX_SAFE_INTEGER) return result
-
-  // 2. sanitize: ????
 
   // 3. split: baht and satang
   // e.g. 432.21 >> 432, 21
