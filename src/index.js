@@ -81,8 +81,10 @@ function bahttext (num) {
   if (typeof num === 'boolean') return defaultResult
   // must be number only
   if (isNaN(Number(num))) return defaultResult
+  // not less than Number.MIN_SAFE_INTEGER
+  if (num < Number.MIN_SAFE_INTEGER) return defaultResult
   // no more than Number.MAX_SAFE_INTEGER
-  if (num >= Number.MAX_SAFE_INTEGER) return defaultResult
+  if (num > Number.MAX_SAFE_INTEGER) return defaultResult
 
   // set
   const positiveNum = Math.abs(num)

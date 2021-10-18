@@ -20,10 +20,17 @@ describe('misc', () => {
     expect(bahttext('it-must-be-number-only')).toBe(zeroText)
   })
 
+  test('less than Number.MIN_SAFE_INTEGER', () => {
+    const items = [1, 20, 9451, 5656549]
+    for (let i = 0; i < items.length; i++) {
+      expect(bahttext(Number.MIN_SAFE_INTEGER - items[i])).toBe(defaultResult)
+    }
+  })
+
   test('more than Number.MAX_SAFE_INTEGER', () => {
-    const additions = [1, 20, 9451, 5656549]
-    for (let i = 0; i < additions.length; i++) {
-      expect(bahttext(Number.MAX_SAFE_INTEGER + additions[i])).toBe(defaultResult)
+    const items = [1, 20, 9451, 5656549]
+    for (let i = 0; i < items.length; i++) {
+      expect(bahttext(Number.MAX_SAFE_INTEGER + items[i])).toBe(defaultResult)
     }
   })
 })
