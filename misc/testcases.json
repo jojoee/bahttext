@@ -574,5 +574,581 @@
     "case": "not more than 1",
     "number": "0.07",
     "text": "เจ็ดสตางค์"
+  },
+  {
+    "category": "digit",
+    "case": "1 digit, zero (negative)",
+    "number": "0.00",
+    "text": "ศูนย์บาทถ้วน"
+  },
+  {
+    "category": "digit",
+    "case": "1 digit (negative)",
+    "number": "-1.00",
+    "text": "ลบหนึ่งบาทถ้วน"
+  },
+  {
+    "category": "digit",
+    "case": "1 digit (negative)",
+    "number": "-2.00",
+    "text": "ลบสองบาทถ้วน"
+  },
+  {
+    "category": "digit",
+    "case": "1 digit (negative)",
+    "number": "-3.00",
+    "text": "ลบสามบาทถ้วน"
+  },
+  {
+    "category": "digit",
+    "case": "1 digit (negative)",
+    "number": "-4.00",
+    "text": "ลบสี่บาทถ้วน"
+  },
+  {
+    "category": "digit",
+    "case": "1 digit (negative)",
+    "number": "-5.00",
+    "text": "ลบห้าบาทถ้วน"
+  },
+  {
+    "category": "digit",
+    "case": "1 digit (negative)",
+    "number": "-6.00",
+    "text": "ลบหกบาทถ้วน"
+  },
+  {
+    "category": "digit",
+    "case": "1 digit (negative)",
+    "number": "-7.00",
+    "text": "ลบเจ็ดบาทถ้วน"
+  },
+  {
+    "category": "digit",
+    "case": "1 digit (negative)",
+    "number": "-8.00",
+    "text": "ลบแปดบาทถ้วน"
+  },
+  {
+    "category": "digit",
+    "case": "1 digit (negative)",
+    "number": "-9.00",
+    "text": "ลบเก้าบาทถ้วน"
+  },
+  {
+    "category": "digit",
+    "case": "2 digits (negative)",
+    "number": "-37.00",
+    "text": "ลบสามสิบเจ็ดบาทถ้วน"
+  },
+  {
+    "category": "digit",
+    "case": "2 digits (negative)",
+    "number": "-48.00",
+    "text": "ลบสี่สิบแปดบาทถ้วน"
+  },
+  {
+    "category": "digit",
+    "case": "3 digits (negative)",
+    "number": "-232.00",
+    "text": "ลบสองร้อยสามสิบสองบาทถ้วน"
+  },
+  {
+    "category": "digit",
+    "case": "3 digits (negative)",
+    "number": "-456.00",
+    "text": "ลบสี่ร้อยห้าสิบหกบาทถ้วน"
+  },
+  {
+    "category": "digit",
+    "case": "4 digits (negative)",
+    "number": "-3333.00",
+    "text": "ลบสามพันสามร้อยสามสิบสามบาทถ้วน"
+  },
+  {
+    "category": "digit",
+    "case": "4 digits (negative)",
+    "number": "-5678.00",
+    "text": "ลบห้าพันหกร้อยเจ็ดสิบแปดบาทถ้วน"
+  },
+  {
+    "category": "digit",
+    "case": "5 digits (negative)",
+    "number": "-12345.00",
+    "text": "ลบหนึ่งหมื่นสองพันสามร้อยสี่สิบห้าบาทถ้วน"
+  },
+  {
+    "category": "digit",
+    "case": "5 digits (negative)",
+    "number": "-44444.00",
+    "text": "ลบสี่หมื่นสี่พันสี่ร้อยสี่สิบสี่บาทถ้วน"
+  },
+  {
+    "category": "digit",
+    "case": "6 digits (negative)",
+    "number": "-234567.00",
+    "text": "ลบสองแสนสามหมื่นสี่พันห้าร้อยหกสิบเจ็ดบาทถ้วน"
+  },
+  {
+    "category": "digit",
+    "case": "6 digits (negative)",
+    "number": "-874563.00",
+    "text": "ลบแปดแสนเจ็ดหมื่นสี่พันห้าร้อยหกสิบสามบาทถ้วน"
+  },
+  {
+    "category": "digit",
+    "case": "7 digits (negative)",
+    "number": "-6666666.00",
+    "text": "ลบหกล้านหกแสนหกหมื่นหกพันหกร้อยหกสิบหกบาทถ้วน"
+  },
+  {
+    "category": "digit",
+    "case": "7 digits (negative)",
+    "number": "-5678934.00",
+    "text": "ลบห้าล้านหกแสนเจ็ดหมื่นแปดพันเก้าร้อยสามสิบสี่บาทถ้วน"
+  },
+  {
+    "category": "digit",
+    "case": "8 digits (negative)",
+    "number": "-34567894.00",
+    "text": "ลบสามสิบสี่ล้านห้าแสนหกหมื่นเจ็ดพันแปดร้อยเก้าสิบสี่บาทถ้วน"
+  },
+  {
+    "category": "digit",
+    "case": "8 digits (negative)",
+    "number": "-77777777.00",
+    "text": "ลบเจ็ดสิบเจ็ดล้านเจ็ดแสนเจ็ดหมื่นเจ็ดพันเจ็ดร้อยเจ็ดสิบเจ็ดบาทถ้วน"
+  },
+  {
+    "category": "digit",
+    "case": "9 digits (negative)",
+    "number": "-578934567.00",
+    "text": "ลบห้าร้อยเจ็ดสิบแปดล้านเก้าแสนสามหมื่นสี่พันห้าร้อยหกสิบเจ็ดบาทถ้วน"
+  },
+  {
+    "category": "digit",
+    "case": "9 digits (negative)",
+    "number": "-888888888.00",
+    "text": "ลบแปดร้อยแปดสิบแปดล้านแปดแสนแปดหมื่นแปดพันแปดร้อยแปดสิบแปดบาทถ้วน"
+  },
+  {
+    "category": "digit",
+    "case": "10 digits (negative)",
+    "number": "-6789345678.00",
+    "text": "ลบหกพันเจ็ดร้อยแปดสิบเก้าล้านสามแสนสี่หมื่นห้าพันหกร้อยเจ็ดสิบแปดบาทถ้วน"
+  },
+  {
+    "category": "digit",
+    "case": "10 digits (negative)",
+    "number": "-9999999999.00",
+    "text": "ลบเก้าพันเก้าร้อยเก้าสิบเก้าล้านเก้าแสนเก้าหมื่นเก้าพันเก้าร้อยเก้าสิบเก้าบาทถ้วน"
+  },
+  {
+    "category": "digit",
+    "case": "11 digits (negative)",
+    "number": "-34567893456.00",
+    "text": "ลบสามหมื่นสี่พันห้าร้อยหกสิบเจ็ดล้านแปดแสนเก้าหมื่นสามพันสี่ร้อยห้าสิบหกบาทถ้วน"
+  },
+  {
+    "category": "digit",
+    "case": "11 digits (negative)",
+    "number": "-56789345678.00",
+    "text": "ลบห้าหมื่นหกพันเจ็ดร้อยแปดสิบเก้าล้านสามแสนสี่หมื่นห้าพันหกร้อยเจ็ดสิบแปดบาทถ้วน"
+  },
+  {
+    "category": "digit",
+    "case": "12 digits (negative)",
+    "number": "-435678956434.00",
+    "text": "ลบสี่แสนสามหมื่นห้าพันหกร้อยเจ็ดสิบแปดล้านเก้าแสนห้าหมื่นหกพันสี่ร้อยสามสิบสี่บาทถ้วน"
+  },
+  {
+    "category": "digit",
+    "case": "12 digits (negative)",
+    "number": "-653568547955.00",
+    "text": "ลบหกแสนห้าหมื่นสามพันห้าร้อยหกสิบแปดล้านห้าแสนสี่หมื่นเจ็ดพันเก้าร้อยห้าสิบห้าบาทถ้วน"
+  },
+  {
+    "category": "digit",
+    "case": "13 digits (negative)",
+    "number": "-6534758965438.00",
+    "text": "ลบหกล้านห้าแสนสามหมื่นสี่พันเจ็ดร้อยห้าสิบแปดล้านเก้าแสนหกหมื่นห้าพันสี่ร้อยสามสิบแปดบาทถ้วน"
+  },
+  {
+    "category": "digit",
+    "case": "13 digits (negative)",
+    "number": "-5467895685894.00",
+    "text": "ลบห้าล้านสี่แสนหกหมื่นเจ็ดพันแปดร้อยเก้าสิบห้าล้านหกแสนแปดหมื่นห้าพันแปดร้อยเก้าสิบสี่บาทถ้วน"
+  },
+  {
+    "category": "digit",
+    "case": "14 digits (negative)",
+    "number": "-56785498567433.00",
+    "text": "ลบห้าสิบหกล้านเจ็ดแสนแปดหมื่นห้าพันสี่ร้อยเก้าสิบแปดล้านห้าแสนหกหมื่นเจ็ดพันสี่ร้อยสามสิบสามบาทถ้วน"
+  },
+  {
+    "category": "digit",
+    "case": "14 digits (negative)",
+    "number": "-54785858964574.00",
+    "text": "ลบห้าสิบสี่ล้านเจ็ดแสนแปดหมื่นห้าพันแปดร้อยห้าสิบแปดล้านเก้าแสนหกหมื่นสี่พันห้าร้อยเจ็ดสิบสี่บาทถ้วน"
+  },
+  {
+    "category": "digit",
+    "case": "15 digits (negative)",
+    "number": "-547895634754789.00",
+    "text": "ลบห้าร้อยสี่สิบเจ็ดล้านแปดแสนเก้าหมื่นห้าพันหกร้อยสามสิบสี่ล้านเจ็ดแสนห้าหมื่นสี่พันเจ็ดร้อยแปดสิบเก้าบาทถ้วน"
+  },
+  {
+    "category": "digit",
+    "case": "15 digits (negative)",
+    "number": "-745678954635895.00",
+    "text": "ลบเจ็ดร้อยสี่สิบห้าล้านหกแสนเจ็ดหมื่นแปดพันเก้าร้อยห้าสิบสี่ล้านหกแสนสามหมื่นห้าพันแปดร้อยเก้าสิบห้าบาทถ้วน"
+  },
+  {
+    "category": "digit",
+    "case": "16 digits, not more than Number.MAX_SAFE_INTEGER (negative)",
+    "number": "-8579633345678950.00",
+    "text": "ลบแปดพันห้าร้อยเจ็ดสิบเก้าล้านหกแสนสามหมื่นสามพันสามร้อยสี่สิบห้าล้านหกแสนเจ็ดหมื่นแปดพันเก้าร้อยห้าสิบบาทถ้วน"
+  },
+  {
+    "category": "digit",
+    "case": "16 digits, not more than Number.MAX_SAFE_INTEGER (negative)",
+    "number": "-6547589456358960.00",
+    "text": "ลบหกพันห้าร้อยสี่สิบเจ็ดล้านห้าแสนแปดหมื่นเก้าพันสี่ร้อยห้าสิบหกล้านสามแสนห้าหมื่นแปดพันเก้าร้อยหกสิบบาทถ้วน"
+  },
+  {
+    "category": "grammar",
+    "case": "end with 1 (more than 10) (negative)",
+    "number": "-11.00",
+    "text": "ลบสิบเอ็ดบาทถ้วน"
+  },
+  {
+    "category": "grammar",
+    "case": "end with 1 (more than 10) (negative)",
+    "number": "-201.00",
+    "text": "ลบสองร้อยหนึ่งบาทถ้วน"
+  },
+  {
+    "category": "grammar",
+    "case": "end with 1 (more than 10) (negative)",
+    "number": "-3061.21",
+    "text": "ลบสามพันหกสิบเอ็ดบาทยี่สิบเอ็ดสตางค์"
+  },
+  {
+    "category": "grammar",
+    "case": "end with 1 (more than 10) (negative)",
+    "number": "-456011.71",
+    "text": "ลบสี่แสนห้าหมื่นหกพันสิบเอ็ดบาทเจ็ดสิบเอ็ดสตางค์"
+  },
+  {
+    "category": "grammar",
+    "case": "end with 1 (more than 10) (negative)",
+    "number": "-51000001.00",
+    "text": "ลบห้าสิบเอ็ดล้านหนึ่งบาทถ้วน"
+  },
+  {
+    "category": "grammar",
+    "case": "end with 1 (more than 10) (negative)",
+    "number": "-5151515151.00",
+    "text": "ลบห้าพันหนึ่งร้อยห้าสิบเอ็ดล้านห้าแสนหนึ่งหมื่นห้าพันหนึ่งร้อยห้าสิบเอ็ดบาทถ้วน"
+  },
+  {
+    "category": "grammar",
+    "case": "end with 1x (negative)",
+    "number": "-14.00",
+    "text": "ลบสิบสี่บาทถ้วน"
+  },
+  {
+    "category": "grammar",
+    "case": "end with 1x (negative)",
+    "number": "-40019.00",
+    "text": "ลบสี่หมื่นสิบเก้าบาทถ้วน"
+  },
+  {
+    "category": "grammar",
+    "case": "end with 1x (negative)",
+    "number": "-317.10",
+    "text": "ลบสามร้อยสิบเจ็ดบาทสิบสตางค์"
+  },
+  {
+    "category": "grammar",
+    "case": "end with 1x (negative)",
+    "number": "-40019.17",
+    "text": "ลบสี่หมื่นสิบเก้าบาทสิบเจ็ดสตางค์"
+  },
+  {
+    "category": "grammar",
+    "case": "end with 1x (negative)",
+    "number": "-40010.10",
+    "text": "ลบสี่หมื่นสิบบาทสิบสตางค์"
+  },
+  {
+    "category": "grammar",
+    "case": "end with 2x (negative)",
+    "number": "-22.00",
+    "text": "ลบยี่สิบสองบาทถ้วน"
+  },
+  {
+    "category": "grammar",
+    "case": "end with 2x (negative)",
+    "number": "-5723.00",
+    "text": "ลบห้าพันเจ็ดร้อยยี่สิบสามบาทถ้วน"
+  },
+  {
+    "category": "grammar",
+    "case": "end with 2x (negative)",
+    "number": "-57.23",
+    "text": "ลบห้าสิบเจ็ดบาทยี่สิบสามสตางค์"
+  },
+  {
+    "category": "grammar",
+    "case": "end with 2x (negative)",
+    "number": "-422.26",
+    "text": "ลบสี่ร้อยยี่สิบสองบาทยี่สิบหกสตางค์"
+  },
+  {
+    "category": "grammar",
+    "case": "end with 2x (negative)",
+    "number": "-420.20",
+    "text": "ลบสี่ร้อยยี่สิบบาทยี่สิบสตางค์"
+  },
+  {
+    "category": "grammar",
+    "case": "end with 11 (negative)",
+    "number": "-11.00",
+    "text": "ลบสิบเอ็ดบาทถ้วน"
+  },
+  {
+    "category": "grammar",
+    "case": "end with 11 (negative)",
+    "number": "-54851544611.00",
+    "text": "ลบห้าหมื่นสี่พันแปดร้อยห้าสิบเอ็ดล้านห้าแสนสี่หมื่นสี่พันหกร้อยสิบเอ็ดบาทถ้วน"
+  },
+  {
+    "category": "grammar",
+    "case": "end with 11 (negative)",
+    "number": "-11.11",
+    "text": "ลบสิบเอ็ดบาทสิบเอ็ดสตางค์"
+  },
+  {
+    "category": "grammar",
+    "case": "end with 11 (negative)",
+    "number": "-246311.11",
+    "text": "ลบสองแสนสี่หมื่นหกพันสามร้อยสิบเอ็ดบาทสิบเอ็ดสตางค์"
+  },
+  {
+    "category": "grammar",
+    "case": "end with 21 (negative)",
+    "number": "-646545421.00",
+    "text": "ลบหกร้อยสี่สิบหกล้านห้าแสนสี่หมื่นห้าพันสี่ร้อยยี่สิบเอ็ดบาทถ้วน"
+  },
+  {
+    "category": "grammar",
+    "case": "end with 21 (negative)",
+    "number": "-62521.00",
+    "text": "ลบหกหมื่นสองพันห้าร้อยยี่สิบเอ็ดบาทถ้วน"
+  },
+  {
+    "category": "grammar",
+    "case": "end with 21 (negative)",
+    "number": "-21.21",
+    "text": "ลบยี่สิบเอ็ดบาทยี่สิบเอ็ดสตางค์"
+  },
+  {
+    "category": "grammar",
+    "case": "end with 21 (negative)",
+    "number": "-45621.21",
+    "text": "ลบสี่หมื่นห้าพันหกร้อยยี่สิบเอ็ดบาทยี่สิบเอ็ดสตางค์"
+  },
+  {
+    "category": "grammar",
+    "case": "multi occurrence of 1x (negative)",
+    "number": "-14151614181914.00",
+    "text": "ลบสิบสี่ล้านหนึ่งแสนห้าหมื่นหนึ่งพันหกร้อยสิบสี่ล้านหนึ่งแสนแปดหมื่นหนึ่งพันเก้าร้อยสิบสี่บาทถ้วน"
+  },
+  {
+    "category": "grammar",
+    "case": "multi occurrence of 1x (negative)",
+    "number": "-1653189518.00",
+    "text": "ลบหนึ่งพันหกร้อยห้าสิบสามล้านหนึ่งแสนแปดหมื่นเก้าพันห้าร้อยสิบแปดบาทถ้วน"
+  },
+  {
+    "category": "grammar",
+    "case": "multi occurrence of 1x (negative)",
+    "number": "-191415.11",
+    "text": "ลบหนึ่งแสนเก้าหมื่นหนึ่งพันสี่ร้อยสิบห้าบาทสิบเอ็ดสตางค์"
+  },
+  {
+    "category": "grammar",
+    "case": "multi occurrence of 2x (negative)",
+    "number": "-2565259523.00",
+    "text": "ลบสองพันห้าร้อยหกสิบห้าล้านสองแสนห้าหมื่นเก้าพันห้าร้อยยี่สิบสามบาทถ้วน"
+  },
+  {
+    "category": "grammar",
+    "case": "multi occurrence of 2x (negative)",
+    "number": "-2425262728.00",
+    "text": "ลบสองพันสี่ร้อยยี่สิบห้าล้านสองแสนหกหมื่นสองพันเจ็ดร้อยยี่สิบแปดบาทถ้วน"
+  },
+  {
+    "category": "grammar",
+    "case": "multi occurrence of 2x (negative)",
+    "number": "-282622.22",
+    "text": "ลบสองแสนแปดหมื่นสองพันหกร้อยยี่สิบสองบาทยี่สิบสองสตางค์"
+  },
+  {
+    "category": "decimals",
+    "case": "general (negative)",
+    "number": "-1.01",
+    "text": "ลบหนึ่งบาทหนึ่งสตางค์"
+  },
+  {
+    "category": "decimals",
+    "case": "general (negative)",
+    "number": "-1.02",
+    "text": "ลบหนึ่งบาทสองสตางค์"
+  },
+  {
+    "category": "decimals",
+    "case": "general (negative)",
+    "number": "-1.03",
+    "text": "ลบหนึ่งบาทสามสตางค์"
+  },
+  {
+    "category": "decimals",
+    "case": "general (negative)",
+    "number": "-1.04",
+    "text": "ลบหนึ่งบาทสี่สตางค์"
+  },
+  {
+    "category": "decimals",
+    "case": "general (negative)",
+    "number": "-1.05",
+    "text": "ลบหนึ่งบาทห้าสตางค์"
+  },
+  {
+    "category": "decimals",
+    "case": "general (negative)",
+    "number": "-1.06",
+    "text": "ลบหนึ่งบาทหกสตางค์"
+  },
+  {
+    "category": "decimals",
+    "case": "general (negative)",
+    "number": "-1.07",
+    "text": "ลบหนึ่งบาทเจ็ดสตางค์"
+  },
+  {
+    "category": "decimals",
+    "case": "general (negative)",
+    "number": "-1.08",
+    "text": "ลบหนึ่งบาทแปดสตางค์"
+  },
+  {
+    "category": "decimals",
+    "case": "general (negative)",
+    "number": "-1.09",
+    "text": "ลบหนึ่งบาทเก้าสตางค์"
+  },
+  {
+    "category": "decimals",
+    "case": "general (negative)",
+    "number": "-1.10",
+    "text": "ลบหนึ่งบาทสิบสตางค์"
+  },
+  {
+    "category": "decimals",
+    "case": "general (negative)",
+    "number": "-32.23",
+    "text": "ลบสามสิบสองบาทยี่สิบสามสตางค์"
+  },
+  {
+    "category": "decimals",
+    "case": "general (negative)",
+    "number": "-574.45",
+    "text": "ลบห้าร้อยเจ็ดสิบสี่บาทสี่สิบห้าสตางค์"
+  },
+  {
+    "category": "decimals",
+    "case": "general (negative)",
+    "number": "-5789.67",
+    "text": "ลบห้าพันเจ็ดร้อยแปดสิบเก้าบาทหกสิบเจ็ดสตางค์"
+  },
+  {
+    "category": "decimals",
+    "case": "general (negative)",
+    "number": "-63147.89",
+    "text": "ลบหกหมื่นสามพันหนึ่งร้อยสี่สิบเจ็ดบาทแปดสิบเก้าสตางค์"
+  },
+  {
+    "category": "decimals",
+    "case": "more than 2 decimals, using 2 decimals (negative)",
+    "number": "-25.12",
+    "text": "ลบยี่สิบห้าบาทสิบสองสตางค์"
+  },
+  {
+    "category": "decimals",
+    "case": "more than 2 decimals, using 2 decimals (negative)",
+    "number": "-345.23",
+    "text": "ลบสามร้อยสี่สิบห้าบาทยี่สิบสามสตางค์"
+  },
+  {
+    "category": "decimals",
+    "case": "more than 2 decimals, using 2 decimals (negative)",
+    "number": "-5678.46",
+    "text": "ลบห้าพันหกร้อยเจ็ดสิบแปดบาทสี่สิบหกสตางค์"
+  },
+  {
+    "category": "decimals",
+    "case": "not more than 1 (negative)",
+    "number": "-0.25",
+    "text": "ลบยี่สิบห้าสตางค์"
+  },
+  {
+    "category": "decimals",
+    "case": "not more than 1 (negative)",
+    "number": "-0.36",
+    "text": "ลบสามสิบหกสตางค์"
+  },
+  {
+    "category": "decimals",
+    "case": "not more than 1 (negative)",
+    "number": "-0.67",
+    "text": "ลบหกสิบเจ็ดสตางค์"
+  },
+  {
+    "category": "decimals",
+    "case": "not more than 1 (negative)",
+    "number": "-0.11",
+    "text": "ลบสิบเอ็ดสตางค์"
+  },
+  {
+    "category": "decimals",
+    "case": "not more than 1 (negative)",
+    "number": "-0.21",
+    "text": "ลบยี่สิบเอ็ดสตางค์"
+  },
+  {
+    "category": "decimals",
+    "case": "not more than 1 (negative)",
+    "number": "-0.10",
+    "text": "ลบสิบสตางค์"
+  },
+  {
+    "category": "decimals",
+    "case": "not more than 1 (negative)",
+    "number": "-0.20",
+    "text": "ลบยี่สิบสตางค์"
+  },
+  {
+    "category": "decimals",
+    "case": "not more than 1 (negative)",
+    "number": "-0.02",
+    "text": "ลบสองสตางค์"
+  },
+  {
+    "category": "decimals",
+    "case": "not more than 1 (negative)",
+    "number": "-0.07",
+    "text": "ลบเจ็ดสตางค์"
   }
 ]

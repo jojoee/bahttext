@@ -21,25 +21,19 @@ describe('misc', () => {
   })
 
   test('more than Number.MAX_SAFE_INTEGER', () => {
-    expect(bahttext(Number.MAX_SAFE_INTEGER + 1)).toBe(defaultResult)
-    expect(bahttext(Number.MAX_SAFE_INTEGER + 20)).toBe(defaultResult)
-    expect(bahttext(Number.MAX_SAFE_INTEGER + 987)).toBe(defaultResult)
-    expect(bahttext(Number.MAX_SAFE_INTEGER + 54848461)).toBe(defaultResult)
-  })
-})
-
-describe('Google Sheet', () => {
-  test('imported from Google Sheet', () => {
-    for (let i = 0; i < testCases.length; i++) {
-      const customMessage = JSON.stringify(testCases[i])
-      expect(bahttext(Number(testCases[i].number)), customMessage).toBe(testCases[i].text)
+    const additions = [1, 20, 9451, 5656549]
+    for (let i = 0; i < additions.length; i++) {
+      expect(bahttext(Number.MAX_SAFE_INTEGER + additions[i])).toBe(defaultResult)
     }
   })
 })
 
-describe('negative number', () => {
-
-  // test('negative number', () => {
-
-  // })
+describe('number', () => {
+  test('imported from Google Sheet', () => {
+    for (let i = 0; i < testCases.length; i++) {
+      const customMessage = JSON.stringify(testCases[i])
+      const number = Number(testCases[i].number)
+      expect(bahttext(number), customMessage).toBe(testCases[i].text)
+    }
+  })
 })

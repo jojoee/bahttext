@@ -85,12 +85,13 @@ function bahttext (num) {
   if (num >= Number.MAX_SAFE_INTEGER) return defaultResult
 
   // set
-  let result = defaultResult
+  const positiveNum = Math.abs(num)
 
   // split baht and satang e.g. 432.214567 >> 432, 21
-  const bahtStr = Math.floor(num).toString()
+  const bahtStr = Math.floor(positiveNum).toString()
   /** @type {string} */
-  const satangStr = Math.round(num % 1 * 100).toString()
+  const satangStr = (positiveNum % 1 * 100).toFixed(2).split('.')[0]
+
   /** @type {number[]} */
   const bahtArr = Array.from(bahtStr).map(Number)
   /** @type {number[]} */
@@ -105,9 +106,9 @@ function bahttext (num) {
   satang = grammarFix(satang)
 
   // combine
-  result = combine(baht, satang)
+  const result = combine(baht, satang)
 
-  return result
+  return num >= 0 ? result : 'ลบ' + result
 }
 
 if (typeof module !== 'undefined' &&
