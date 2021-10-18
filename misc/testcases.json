@@ -1,0 +1,578 @@
+[
+  {
+    "category": "digit",
+    "case": "1 digit, zero",
+    "number": "0.00",
+    "text": "ศูนย์บาทถ้วน"
+  },
+  {
+    "category": "digit",
+    "case": "1 digit",
+    "number": "1.00",
+    "text": "หนึ่งบาทถ้วน"
+  },
+  {
+    "category": "digit",
+    "case": "1 digit",
+    "number": "2.00",
+    "text": "สองบาทถ้วน"
+  },
+  {
+    "category": "digit",
+    "case": "1 digit",
+    "number": "3.00",
+    "text": "สามบาทถ้วน"
+  },
+  {
+    "category": "digit",
+    "case": "1 digit",
+    "number": "4.00",
+    "text": "สี่บาทถ้วน"
+  },
+  {
+    "category": "digit",
+    "case": "1 digit",
+    "number": "5.00",
+    "text": "ห้าบาทถ้วน"
+  },
+  {
+    "category": "digit",
+    "case": "1 digit",
+    "number": "6.00",
+    "text": "หกบาทถ้วน"
+  },
+  {
+    "category": "digit",
+    "case": "1 digit",
+    "number": "7.00",
+    "text": "เจ็ดบาทถ้วน"
+  },
+  {
+    "category": "digit",
+    "case": "1 digit",
+    "number": "8.00",
+    "text": "แปดบาทถ้วน"
+  },
+  {
+    "category": "digit",
+    "case": "1 digit",
+    "number": "9.00",
+    "text": "เก้าบาทถ้วน"
+  },
+  {
+    "category": "digit",
+    "case": "2 digits",
+    "number": "37.00",
+    "text": "สามสิบเจ็ดบาทถ้วน"
+  },
+  {
+    "category": "digit",
+    "case": "2 digits",
+    "number": "48.00",
+    "text": "สี่สิบแปดบาทถ้วน"
+  },
+  {
+    "category": "digit",
+    "case": "3 digits",
+    "number": "232.00",
+    "text": "สองร้อยสามสิบสองบาทถ้วน"
+  },
+  {
+    "category": "digit",
+    "case": "3 digits",
+    "number": "456.00",
+    "text": "สี่ร้อยห้าสิบหกบาทถ้วน"
+  },
+  {
+    "category": "digit",
+    "case": "4 digits",
+    "number": "3333.00",
+    "text": "สามพันสามร้อยสามสิบสามบาทถ้วน"
+  },
+  {
+    "category": "digit",
+    "case": "4 digits",
+    "number": "5678.00",
+    "text": "ห้าพันหกร้อยเจ็ดสิบแปดบาทถ้วน"
+  },
+  {
+    "category": "digit",
+    "case": "5 digits",
+    "number": "12345.00",
+    "text": "หนึ่งหมื่นสองพันสามร้อยสี่สิบห้าบาทถ้วน"
+  },
+  {
+    "category": "digit",
+    "case": "5 digits",
+    "number": "44444.00",
+    "text": "สี่หมื่นสี่พันสี่ร้อยสี่สิบสี่บาทถ้วน"
+  },
+  {
+    "category": "digit",
+    "case": "6 digits",
+    "number": "234567.00",
+    "text": "สองแสนสามหมื่นสี่พันห้าร้อยหกสิบเจ็ดบาทถ้วน"
+  },
+  {
+    "category": "digit",
+    "case": "6 digits",
+    "number": "874563.00",
+    "text": "แปดแสนเจ็ดหมื่นสี่พันห้าร้อยหกสิบสามบาทถ้วน"
+  },
+  {
+    "category": "digit",
+    "case": "7 digits",
+    "number": "6666666.00",
+    "text": "หกล้านหกแสนหกหมื่นหกพันหกร้อยหกสิบหกบาทถ้วน"
+  },
+  {
+    "category": "digit",
+    "case": "7 digits",
+    "number": "5678934.00",
+    "text": "ห้าล้านหกแสนเจ็ดหมื่นแปดพันเก้าร้อยสามสิบสี่บาทถ้วน"
+  },
+  {
+    "category": "digit",
+    "case": "8 digits",
+    "number": "34567894.00",
+    "text": "สามสิบสี่ล้านห้าแสนหกหมื่นเจ็ดพันแปดร้อยเก้าสิบสี่บาทถ้วน"
+  },
+  {
+    "category": "digit",
+    "case": "8 digits",
+    "number": "77777777.00",
+    "text": "เจ็ดสิบเจ็ดล้านเจ็ดแสนเจ็ดหมื่นเจ็ดพันเจ็ดร้อยเจ็ดสิบเจ็ดบาทถ้วน"
+  },
+  {
+    "category": "digit",
+    "case": "9 digits",
+    "number": "578934567.00",
+    "text": "ห้าร้อยเจ็ดสิบแปดล้านเก้าแสนสามหมื่นสี่พันห้าร้อยหกสิบเจ็ดบาทถ้วน"
+  },
+  {
+    "category": "digit",
+    "case": "9 digits",
+    "number": "888888888.00",
+    "text": "แปดร้อยแปดสิบแปดล้านแปดแสนแปดหมื่นแปดพันแปดร้อยแปดสิบแปดบาทถ้วน"
+  },
+  {
+    "category": "digit",
+    "case": "10 digits",
+    "number": "6789345678.00",
+    "text": "หกพันเจ็ดร้อยแปดสิบเก้าล้านสามแสนสี่หมื่นห้าพันหกร้อยเจ็ดสิบแปดบาทถ้วน"
+  },
+  {
+    "category": "digit",
+    "case": "10 digits",
+    "number": "9999999999.00",
+    "text": "เก้าพันเก้าร้อยเก้าสิบเก้าล้านเก้าแสนเก้าหมื่นเก้าพันเก้าร้อยเก้าสิบเก้าบาทถ้วน"
+  },
+  {
+    "category": "digit",
+    "case": "11 digits",
+    "number": "34567893456.00",
+    "text": "สามหมื่นสี่พันห้าร้อยหกสิบเจ็ดล้านแปดแสนเก้าหมื่นสามพันสี่ร้อยห้าสิบหกบาทถ้วน"
+  },
+  {
+    "category": "digit",
+    "case": "11 digits",
+    "number": "56789345678.00",
+    "text": "ห้าหมื่นหกพันเจ็ดร้อยแปดสิบเก้าล้านสามแสนสี่หมื่นห้าพันหกร้อยเจ็ดสิบแปดบาทถ้วน"
+  },
+  {
+    "category": "digit",
+    "case": "12 digits",
+    "number": "435678956434.00",
+    "text": "สี่แสนสามหมื่นห้าพันหกร้อยเจ็ดสิบแปดล้านเก้าแสนห้าหมื่นหกพันสี่ร้อยสามสิบสี่บาทถ้วน"
+  },
+  {
+    "category": "digit",
+    "case": "12 digits",
+    "number": "653568547955.00",
+    "text": "หกแสนห้าหมื่นสามพันห้าร้อยหกสิบแปดล้านห้าแสนสี่หมื่นเจ็ดพันเก้าร้อยห้าสิบห้าบาทถ้วน"
+  },
+  {
+    "category": "digit",
+    "case": "13 digits",
+    "number": "6534758965438.00",
+    "text": "หกล้านห้าแสนสามหมื่นสี่พันเจ็ดร้อยห้าสิบแปดล้านเก้าแสนหกหมื่นห้าพันสี่ร้อยสามสิบแปดบาทถ้วน"
+  },
+  {
+    "category": "digit",
+    "case": "13 digits",
+    "number": "5467895685894.00",
+    "text": "ห้าล้านสี่แสนหกหมื่นเจ็ดพันแปดร้อยเก้าสิบห้าล้านหกแสนแปดหมื่นห้าพันแปดร้อยเก้าสิบสี่บาทถ้วน"
+  },
+  {
+    "category": "digit",
+    "case": "14 digits",
+    "number": "56785498567433.00",
+    "text": "ห้าสิบหกล้านเจ็ดแสนแปดหมื่นห้าพันสี่ร้อยเก้าสิบแปดล้านห้าแสนหกหมื่นเจ็ดพันสี่ร้อยสามสิบสามบาทถ้วน"
+  },
+  {
+    "category": "digit",
+    "case": "14 digits",
+    "number": "54785858964574.00",
+    "text": "ห้าสิบสี่ล้านเจ็ดแสนแปดหมื่นห้าพันแปดร้อยห้าสิบแปดล้านเก้าแสนหกหมื่นสี่พันห้าร้อยเจ็ดสิบสี่บาทถ้วน"
+  },
+  {
+    "category": "digit",
+    "case": "15 digits",
+    "number": "547895634754789.00",
+    "text": "ห้าร้อยสี่สิบเจ็ดล้านแปดแสนเก้าหมื่นห้าพันหกร้อยสามสิบสี่ล้านเจ็ดแสนห้าหมื่นสี่พันเจ็ดร้อยแปดสิบเก้าบาทถ้วน"
+  },
+  {
+    "category": "digit",
+    "case": "15 digits",
+    "number": "745678954635895.00",
+    "text": "เจ็ดร้อยสี่สิบห้าล้านหกแสนเจ็ดหมื่นแปดพันเก้าร้อยห้าสิบสี่ล้านหกแสนสามหมื่นห้าพันแปดร้อยเก้าสิบห้าบาทถ้วน"
+  },
+  {
+    "category": "digit",
+    "case": "16 digits, not more than Number.MAX_SAFE_INTEGER",
+    "number": "8579633345678950.00",
+    "text": "แปดพันห้าร้อยเจ็ดสิบเก้าล้านหกแสนสามหมื่นสามพันสามร้อยสี่สิบห้าล้านหกแสนเจ็ดหมื่นแปดพันเก้าร้อยห้าสิบบาทถ้วน"
+  },
+  {
+    "category": "digit",
+    "case": "16 digits, not more than Number.MAX_SAFE_INTEGER",
+    "number": "6547589456358960.00",
+    "text": "หกพันห้าร้อยสี่สิบเจ็ดล้านห้าแสนแปดหมื่นเก้าพันสี่ร้อยห้าสิบหกล้านสามแสนห้าหมื่นแปดพันเก้าร้อยหกสิบบาทถ้วน"
+  },
+  {
+    "category": "grammar",
+    "case": "end with 1 (more than 10)",
+    "number": "11.00",
+    "text": "สิบเอ็ดบาทถ้วน"
+  },
+  {
+    "category": "grammar",
+    "case": "end with 1 (more than 10)",
+    "number": "201.00",
+    "text": "สองร้อยหนึ่งบาทถ้วน"
+  },
+  {
+    "category": "grammar",
+    "case": "end with 1 (more than 10)",
+    "number": "3061.21",
+    "text": "สามพันหกสิบเอ็ดบาทยี่สิบเอ็ดสตางค์"
+  },
+  {
+    "category": "grammar",
+    "case": "end with 1 (more than 10)",
+    "number": "456011.71",
+    "text": "สี่แสนห้าหมื่นหกพันสิบเอ็ดบาทเจ็ดสิบเอ็ดสตางค์"
+  },
+  {
+    "category": "grammar",
+    "case": "end with 1 (more than 10)",
+    "number": "51000001.00",
+    "text": "ห้าสิบเอ็ดล้านหนึ่งบาทถ้วน"
+  },
+  {
+    "category": "grammar",
+    "case": "end with 1 (more than 10)",
+    "number": "5151515151.00",
+    "text": "ห้าพันหนึ่งร้อยห้าสิบเอ็ดล้านห้าแสนหนึ่งหมื่นห้าพันหนึ่งร้อยห้าสิบเอ็ดบาทถ้วน"
+  },
+  {
+    "category": "grammar",
+    "case": "end with 1x",
+    "number": "14.00",
+    "text": "สิบสี่บาทถ้วน"
+  },
+  {
+    "category": "grammar",
+    "case": "end with 1x",
+    "number": "40019.00",
+    "text": "สี่หมื่นสิบเก้าบาทถ้วน"
+  },
+  {
+    "category": "grammar",
+    "case": "end with 1x",
+    "number": "317.10",
+    "text": "สามร้อยสิบเจ็ดบาทสิบสตางค์"
+  },
+  {
+    "category": "grammar",
+    "case": "end with 1x",
+    "number": "40019.17",
+    "text": "สี่หมื่นสิบเก้าบาทสิบเจ็ดสตางค์"
+  },
+  {
+    "category": "grammar",
+    "case": "end with 1x",
+    "number": "40010.10",
+    "text": "สี่หมื่นสิบบาทสิบสตางค์"
+  },
+  {
+    "category": "grammar",
+    "case": "end with 2x",
+    "number": "22.00",
+    "text": "ยี่สิบสองบาทถ้วน"
+  },
+  {
+    "category": "grammar",
+    "case": "end with 2x",
+    "number": "5723.00",
+    "text": "ห้าพันเจ็ดร้อยยี่สิบสามบาทถ้วน"
+  },
+  {
+    "category": "grammar",
+    "case": "end with 2x",
+    "number": "57.23",
+    "text": "ห้าสิบเจ็ดบาทยี่สิบสามสตางค์"
+  },
+  {
+    "category": "grammar",
+    "case": "end with 2x",
+    "number": "422.26",
+    "text": "สี่ร้อยยี่สิบสองบาทยี่สิบหกสตางค์"
+  },
+  {
+    "category": "grammar",
+    "case": "end with 2x",
+    "number": "420.20",
+    "text": "สี่ร้อยยี่สิบบาทยี่สิบสตางค์"
+  },
+  {
+    "category": "grammar",
+    "case": "end with 11",
+    "number": "11.00",
+    "text": "สิบเอ็ดบาทถ้วน"
+  },
+  {
+    "category": "grammar",
+    "case": "end with 11",
+    "number": "54851544611.00",
+    "text": "ห้าหมื่นสี่พันแปดร้อยห้าสิบเอ็ดล้านห้าแสนสี่หมื่นสี่พันหกร้อยสิบเอ็ดบาทถ้วน"
+  },
+  {
+    "category": "grammar",
+    "case": "end with 11",
+    "number": "11.11",
+    "text": "สิบเอ็ดบาทสิบเอ็ดสตางค์"
+  },
+  {
+    "category": "grammar",
+    "case": "end with 11",
+    "number": "246311.11",
+    "text": "สองแสนสี่หมื่นหกพันสามร้อยสิบเอ็ดบาทสิบเอ็ดสตางค์"
+  },
+  {
+    "category": "grammar",
+    "case": "end with 21",
+    "number": "646545421.00",
+    "text": "หกร้อยสี่สิบหกล้านห้าแสนสี่หมื่นห้าพันสี่ร้อยยี่สิบเอ็ดบาทถ้วน"
+  },
+  {
+    "category": "grammar",
+    "case": "end with 21",
+    "number": "62521.00",
+    "text": "หกหมื่นสองพันห้าร้อยยี่สิบเอ็ดบาทถ้วน"
+  },
+  {
+    "category": "grammar",
+    "case": "end with 21",
+    "number": "21.21",
+    "text": "ยี่สิบเอ็ดบาทยี่สิบเอ็ดสตางค์"
+  },
+  {
+    "category": "grammar",
+    "case": "end with 21",
+    "number": "45621.21",
+    "text": "สี่หมื่นห้าพันหกร้อยยี่สิบเอ็ดบาทยี่สิบเอ็ดสตางค์"
+  },
+  {
+    "category": "grammar",
+    "case": "multi occurrence of 1x",
+    "number": "14151614181914.00",
+    "text": "สิบสี่ล้านหนึ่งแสนห้าหมื่นหนึ่งพันหกร้อยสิบสี่ล้านหนึ่งแสนแปดหมื่นหนึ่งพันเก้าร้อยสิบสี่บาทถ้วน"
+  },
+  {
+    "category": "grammar",
+    "case": "multi occurrence of 1x",
+    "number": "1653189518.00",
+    "text": "หนึ่งพันหกร้อยห้าสิบสามล้านหนึ่งแสนแปดหมื่นเก้าพันห้าร้อยสิบแปดบาทถ้วน"
+  },
+  {
+    "category": "grammar",
+    "case": "multi occurrence of 1x",
+    "number": "191415.11",
+    "text": "หนึ่งแสนเก้าหมื่นหนึ่งพันสี่ร้อยสิบห้าบาทสิบเอ็ดสตางค์"
+  },
+  {
+    "category": "grammar",
+    "case": "multi occurrence of 2x",
+    "number": "2565259523.00",
+    "text": "สองพันห้าร้อยหกสิบห้าล้านสองแสนห้าหมื่นเก้าพันห้าร้อยยี่สิบสามบาทถ้วน"
+  },
+  {
+    "category": "grammar",
+    "case": "multi occurrence of 2x",
+    "number": "2425262728.00",
+    "text": "สองพันสี่ร้อยยี่สิบห้าล้านสองแสนหกหมื่นสองพันเจ็ดร้อยยี่สิบแปดบาทถ้วน"
+  },
+  {
+    "category": "grammar",
+    "case": "multi occurrence of 2x",
+    "number": "282622.22",
+    "text": "สองแสนแปดหมื่นสองพันหกร้อยยี่สิบสองบาทยี่สิบสองสตางค์"
+  },
+  {
+    "category": "decimals",
+    "case": "general",
+    "number": "1.01",
+    "text": "หนึ่งบาทหนึ่งสตางค์"
+  },
+  {
+    "category": "decimals",
+    "case": "general",
+    "number": "1.02",
+    "text": "หนึ่งบาทสองสตางค์"
+  },
+  {
+    "category": "decimals",
+    "case": "general",
+    "number": "1.03",
+    "text": "หนึ่งบาทสามสตางค์"
+  },
+  {
+    "category": "decimals",
+    "case": "general",
+    "number": "1.04",
+    "text": "หนึ่งบาทสี่สตางค์"
+  },
+  {
+    "category": "decimals",
+    "case": "general",
+    "number": "1.05",
+    "text": "หนึ่งบาทห้าสตางค์"
+  },
+  {
+    "category": "decimals",
+    "case": "general",
+    "number": "1.06",
+    "text": "หนึ่งบาทหกสตางค์"
+  },
+  {
+    "category": "decimals",
+    "case": "general",
+    "number": "1.07",
+    "text": "หนึ่งบาทเจ็ดสตางค์"
+  },
+  {
+    "category": "decimals",
+    "case": "general",
+    "number": "1.08",
+    "text": "หนึ่งบาทแปดสตางค์"
+  },
+  {
+    "category": "decimals",
+    "case": "general",
+    "number": "1.09",
+    "text": "หนึ่งบาทเก้าสตางค์"
+  },
+  {
+    "category": "decimals",
+    "case": "general",
+    "number": "1.10",
+    "text": "หนึ่งบาทสิบสตางค์"
+  },
+  {
+    "category": "decimals",
+    "case": "general",
+    "number": "32.23",
+    "text": "สามสิบสองบาทยี่สิบสามสตางค์"
+  },
+  {
+    "category": "decimals",
+    "case": "general",
+    "number": "574.45",
+    "text": "ห้าร้อยเจ็ดสิบสี่บาทสี่สิบห้าสตางค์"
+  },
+  {
+    "category": "decimals",
+    "case": "general",
+    "number": "5789.67",
+    "text": "ห้าพันเจ็ดร้อยแปดสิบเก้าบาทหกสิบเจ็ดสตางค์"
+  },
+  {
+    "category": "decimals",
+    "case": "general",
+    "number": "63147.89",
+    "text": "หกหมื่นสามพันหนึ่งร้อยสี่สิบเจ็ดบาทแปดสิบเก้าสตางค์"
+  },
+  {
+    "category": "decimals",
+    "case": "more than 2 decimals, using 2 decimals",
+    "number": "25.12",
+    "text": "ยี่สิบห้าบาทสิบสองสตางค์"
+  },
+  {
+    "category": "decimals",
+    "case": "more than 2 decimals, using 2 decimals",
+    "number": "345.23",
+    "text": "สามร้อยสี่สิบห้าบาทยี่สิบสามสตางค์"
+  },
+  {
+    "category": "decimals",
+    "case": "more than 2 decimals, using 2 decimals",
+    "number": "5678.46",
+    "text": "ห้าพันหกร้อยเจ็ดสิบแปดบาทสี่สิบหกสตางค์"
+  },
+  {
+    "category": "decimals",
+    "case": "not more than 1",
+    "number": "0.25",
+    "text": "ยี่สิบห้าสตางค์"
+  },
+  {
+    "category": "decimals",
+    "case": "not more than 1",
+    "number": "0.36",
+    "text": "สามสิบหกสตางค์"
+  },
+  {
+    "category": "decimals",
+    "case": "not more than 1",
+    "number": "0.67",
+    "text": "หกสิบเจ็ดสตางค์"
+  },
+  {
+    "category": "decimals",
+    "case": "not more than 1",
+    "number": "0.11",
+    "text": "สิบเอ็ดสตางค์"
+  },
+  {
+    "category": "decimals",
+    "case": "not more than 1",
+    "number": "0.21",
+    "text": "ยี่สิบเอ็ดสตางค์"
+  },
+  {
+    "category": "decimals",
+    "case": "not more than 1",
+    "number": "0.10",
+    "text": "สิบสตางค์"
+  },
+  {
+    "category": "decimals",
+    "case": "not more than 1",
+    "number": "0.20",
+    "text": "ยี่สิบสตางค์"
+  },
+  {
+    "category": "decimals",
+    "case": "not more than 1",
+    "number": "0.02",
+    "text": "สองสตางค์"
+  },
+  {
+    "category": "decimals",
+    "case": "not more than 1",
+    "number": "0.07",
+    "text": "เจ็ดสตางค์"
+  }
+]
