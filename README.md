@@ -11,7 +11,7 @@
 
 ภาษา: [ไทย](https://github.com/jojoee/bahttext/blob/master/README.md), [English](https://github.com/jojoee/bahttext/blob/master/README-en.md)
 
-เปลี่ยนตัวเลข เป็นคำอ่านภาษาไทย, โมดูลตัวนี้ได้ทำการทดสอบกับ [Microsoft Office's BAHTTEXT function](https://support.office.com/en-us/article/BAHTTEXT-function-5ba4d0b4-abd3-4325-8d22-7a92d59aab9c), [Demo page](https://jojoee.github.io/bahttext/) เรียบร้อยแล้ว
+เปลี่ยนตัวเลข เป็นคำอ่านภาษาไทย, โมดูลตัวนี้ได้ทำการทดสอบกับ [Google Sheets BAHTTEXT function](https://support.google.com/docs/answer/9982303?hl=en), [Demo page](https://jojoee.github.io/bahttext/) เรียบร้อยแล้ว
 
 ## ติดตั้ง
 
@@ -45,11 +45,22 @@ bahttext(63147.89)
 - [x] 0 Dependencies
 - [x] ทำการทดสอบแบบ unit test
 - [ ] ทดสอบบนเบราว์เซอร์ ในแต่ละ เวอร์ชั่น
-- [ ] ลดการซ้ำซ้อนของการเขียน ระหว่าง code และ ไฟล์ csv ในการทำการทดสอบ
+- [x] ลดการซ้ำซ้อนของการเขียน ระหว่าง code และ ไฟล์ csv ในการทำการทดสอบ
 - [x] [หน้าตัวอย่างการใช้งาน](https://jojoee.github.io/bahttext/)
-- [ ] สนับสนุนการใช้งานกับตัวเลขติดลบ
+- [x] สนับสนุนการใช้งานกับตัวเลขติดลบ
 - [x] แก้ไข semantic-release
 
+## CMD
+
+```
+brew install curl
+brew install jq
+npm install -g
+curl -L -o ./misc/testcases.csv https://docs.google.com/spreadsheets/d/e/2PACX-1vTb8PIKzgo07rn9UpcjqE0YrdMAmf4fyDbL2plUieLCyrn_5O3vDvece7UfkaArWQLUSsaw92jVpY_z/pub?gid=0&single=true&output=csv
+csvtojson ./misc/testcases.csv | jq > ./misc/testcases.json
+```
+
 ## อ้างอิง
+- [Google Sheets BAHTTEXT function](https://support.google.com/docs/answer/9982303?hl=en)
 - [Microsoft Office's BAHTTEXT function](https://support.office.com/en-us/article/BAHTTEXT-function-5ba4d0b4-abd3-4325-8d22-7a92d59aab9c)
 - แรงบัลดาลใจจาก [earthchie/BAHTTEXT.js](https://github.com/earthchie/BAHTTEXT.js)
