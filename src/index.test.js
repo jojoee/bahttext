@@ -1,7 +1,52 @@
-const { bahttext } = require('./index')
+const { bahttext, grammarFix, combine } = require('./index')
 const defaultResult = 'ศูนย์บาทถ้วน'
 const testCases = require('../misc/testcases.json')
 jest.autoMockOff()
+
+// TODO: to be implemented
+describe('num2Word', () => {
+  test('test', () => {
+    expect(true).toBeTruthy()
+  })
+})
+
+describe('grammarFix', () => {
+  test('replace "หนึ่งสิบ" with "สิบ"', () => {
+    expect(grammarFix('หนึ่งสิบหก')).toBe('สิบหก')
+    expect(grammarFix('หนึ่งสิบสี่')).toBe('สิบสี่')
+    expect(grammarFix('ห้าร้อยหนึ่งสิบสาม')).toBe('ห้าร้อยสิบสาม')
+    expect(grammarFix('สี่หมื่นหนึ่งสิบสาม')).toBe('สี่หมื่นสิบสาม')
+  })
+
+  test('replace "สองสิบ" with "ยี่สิบ"', () => {
+    expect(grammarFix('ห้าร้อยสองสิบหนึ่ง')).toBe('ห้าร้อยยี่สิบเอ็ด')
+    expect(grammarFix('สองสิบสี่')).toBe('ยี่สิบสี่')
+    expect(grammarFix('เก้าแสนหกหมื่นสามพันสามร้อยสองสิบสี่')).toBe('เก้าแสนหกหมื่นสามพันสามร้อยยี่สิบสี่')
+    expect(grammarFix('เจ็ดหมื่นห้าพันสี่ร้อยสองสิบหนึ่ง')).toBe('เจ็ดหมื่นห้าพันสี่ร้อยยี่สิบเอ็ด')
+  })
+
+  test('replace "สิบหนึ่ง" with "สิบเอ็ด"', () => {
+    expect(grammarFix('หนึ่งสิบหนึ่ง')).toBe('สิบเอ็ด')
+  })
+})
+
+describe('combine', () => {
+  test('both baht and satang are empty', () => {
+    expect(combine('', '')).toBe('ศูนย์บาทถ้วน')
+  })
+
+  test('both baht and satang are not empty', () => {
+    expect(combine('หนึ่งร้อยยี่สิบสาม', 'ห้าสิบหก')).toBe('หนึ่งร้อยยี่สิบสามบาทห้าสิบหกสตางค์')
+  })
+
+  test('has only baht', () => {
+    expect(combine('แปดแสนเจ็ดหมื่นสี่พันห้าร้อยหกสิบสาม', '')).toBe('แปดแสนเจ็ดหมื่นสี่พันห้าร้อยหกสิบสามบาทถ้วน')
+  })
+
+  test('has only satang', () => {
+    expect(combine('', 'ลบสามสิบหก')).toBe('ลบสามสิบหกสตางค์')
+  })
+})
 
 describe('bahttext', () => {
   test('invalid number', () => {

@@ -116,7 +116,12 @@ function bahttext (num) {
 if (typeof module !== 'undefined' &&
   module.exports != null) {
   module.exports = {
-    bahttext
+    bahttext,
+
+    // export for testing only
+    num2Word,
+    grammarFix,
+    combine
   }
   exports.default = {
     bahttext
