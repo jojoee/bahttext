@@ -51,6 +51,9 @@ bahttext(63147.89)
 - [x] Support negative number
 - [x] Fix semantic-release
 
+## Other languages
+- Python: [jojoee/pybaht](https://github.com/jojoee/pybaht)
+
 ## CMD
 
 ```

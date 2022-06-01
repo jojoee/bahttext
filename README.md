@@ -50,6 +50,9 @@ bahttext(63147.89)
 - [x] สนับสนุนการใช้งานกับตัวเลขติดลบ
 - [x] แก้ไข semantic-release
 
+## ภาษาอื่นๆ
+- Python: [jojoee/pybaht](https://github.com/jojoee/pybaht)
+
 ## CMD
 
 ```
