@@ -3,7 +3,7 @@ const defaultResult = 'ศูนย์บาทถ้วน'
 const testCases = require('../misc/testcases.json')
 jest.autoMockOff()
 
-describe('misc', () => {
+describe('bahttext', () => {
   test('invalid number', () => {
     const zeroText = 'ศูนย์บาทถ้วน'
 
@@ -33,10 +33,8 @@ describe('misc', () => {
       expect(bahttext(Number.MAX_SAFE_INTEGER + items[i])).toBe(defaultResult)
     }
   })
-})
 
-describe('number', () => {
-  test('imported from Google Sheet', () => {
+  test('numbers are imported from Google Sheet', () => {
     for (let i = 0; i < testCases.length; i++) {
       const customMessage = JSON.stringify(testCases[i])
       const number = Number(testCases[i].number)
