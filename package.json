@@ -11,6 +11,7 @@
     "coverage.check": "jest --coverage",
     "semantic-release": "semantic-release",
     "standard": "standard",
+    "standard.fix": "standard --fix",
     "validate": "npm run standard && npm run coverage.check"
   },
   "config": {
