@@ -42,7 +42,7 @@ bahttext(63147.89)
 
 ## Note
 - [x] Compatible with all browsers
-- [x] Node.js version support: 6-12
+- [x] Node.js version support: 6+
 - [x] 0 Dependencies
 - [x] Unit test
 - [ ] Browser compatibility test
