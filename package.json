@@ -7,20 +7,11 @@
   "scripts": {
     "jest": "jest",
     "jest.watch": "jest --watch",
-    "commit": "git-cz",
     "coverage.check": "jest --coverage",
     "semantic-release": "semantic-release",
     "standard": "standard",
     "standard.fix": "standard --fix",
     "validate": "npm run standard && npm run coverage.check"
-  },
-  "config": {
-    "ghooks": {
-      "pre-commit": "npm run validate"
-    },
-    "commitizen": {
-      "path": "node_modules/cz-conventional-changelog"
-    }
   },
   "repository": {
     "type": "git",
@@ -42,9 +33,6 @@
   "homepage": "https://github.com/jojoee/bahttext#readme",
   "dependencies": {},
   "devDependencies": {
-    "commitizen": "4.2.2",
-    "cz-conventional-changelog": "3.3.0",
-    "ghooks": "2.0.4",
     "jest": "^26.6.1",
     "jest-expect-message": "^1.0.2",
     "semantic-release": "^17.2.1",
