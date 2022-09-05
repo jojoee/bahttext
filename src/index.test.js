@@ -1,4 +1,8 @@
-const { bahttext, grammarFix, combine } = require('./index')
+const {
+  bahttext,
+  bahtxtGrammarFix: grammarFix,
+  bahtxtCombine: combine
+} = require('./index')
 const defaultResult = 'ศูนย์บาทถ้วน'
 const testCases = require('../misc/testcases.json')
 jest.autoMockOff()

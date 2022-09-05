@@ -1,12 +1,14 @@
-const defaultResult = 'ศูนย์บาทถ้วน'
-const singleUnitStrs = ['', 'หนึ่ง', 'สอง', 'สาม', 'สี่', 'ห้า', 'หก', 'เจ็ด', 'แปด', 'เก้า']
-const placeNameStrs = ['', 'สิบ', 'ร้อย', 'พัน', 'หมื่น', 'แสน', 'ล้าน']
+const bahtxtConst = {
+  defaultResult: 'ศูนย์บาทถ้วน',
+  singleUnitStrs: ['', 'หนึ่ง', 'สอง', 'สาม', 'สี่', 'ห้า', 'หก', 'เจ็ด', 'แปด', 'เก้า'],
+  placeNameStrs: ['', 'สิบ', 'ร้อย', 'พัน', 'หมื่น', 'แสน', 'ล้าน']
+}
 
 /**
  * @param {number[]} nums
  * @returns {string}
  */
-function num2Word (nums) {
+function bahtxtNum2Word (nums) {
   let result = ''
   const len = nums.length
   const maxLen = 7
@@ -16,12 +18,12 @@ function num2Word (nums) {
     const overflowIndex = len - maxLen + 1
     const overflowNums = nums.slice(0, overflowIndex)
     const remainingNumbs = nums.slice(overflowIndex)
-    return num2Word(overflowNums) + 'ล้าน' + num2Word(remainingNumbs)
+    return bahtxtNum2Word(overflowNums) + 'ล้าน' + bahtxtNum2Word(remainingNumbs)
   } else {
     for (let i = 0; i < len; i++) {
       const digit = nums[i]
       if (digit > 0) {
-        result += singleUnitStrs[digit] + placeNameStrs[len - i - 1]
+        result += bahtxtConst.singleUnitStrs[digit] + bahtxtConst.placeNameStrs[len - i - 1]
       }
     }
   }
@@ -34,7 +36,7 @@ function num2Word (nums) {
  * @param {string} str
  * @returns {string}
  */
-function grammarFix (str) {
+function bahtxtGrammarFix (str) {
   let result = str
 
   result = result.replace(/หนึ่งสิบ/g, 'สิบ')
@@ -45,18 +47,18 @@ function grammarFix (str) {
 }
 
 /**
- * Combine baht and satang
+ * bahtxtCombine baht and satang
  * and also adding unit
  *
  * @param {string} baht
  * @param {string} satang
  * @returns {string}
  */
-function combine (baht, satang) {
+function bahtxtCombine (baht, satang) {
   let result = ''
 
   if (baht === '' && satang === '') {
-    result = defaultResult
+    result = bahtxtConst.defaultResult
   } else if (baht !== '' && satang === '') {
     result = baht + 'บาท' + 'ถ้วน'
   } else if (baht === '' && satang !== '') {
@@ -76,15 +78,15 @@ function combine (baht, satang) {
  */
 function bahttext (num) {
   // no null
-  if (!num) return defaultResult
+  if (!num) return bahtxtConst.defaultResult
   // no boolean
-  if (typeof num === 'boolean') return defaultResult
+  if (typeof num === 'boolean') return bahtxtConst.defaultResult
   // must be number only
-  if (isNaN(Number(num))) return defaultResult
+  if (isNaN(Number(num))) return bahtxtConst.defaultResult
   // not less than Number.MIN_SAFE_INTEGER
-  if (num < Number.MIN_SAFE_INTEGER) return defaultResult
+  if (num < Number.MIN_SAFE_INTEGER) return bahtxtConst.defaultResult
   // no more than Number.MAX_SAFE_INTEGER
-  if (num > Number.MAX_SAFE_INTEGER) return defaultResult
+  if (num > Number.MAX_SAFE_INTEGER) return bahtxtConst.defaultResult
 
   // set
   const positiveNum = Math.abs(num)
@@ -100,15 +102,15 @@ function bahttext (num) {
   const satangArr = Array.from(satangStr).map(Number)
 
   // proceed
-  let baht = num2Word(bahtArr)
-  let satang = num2Word(satangArr)
+  let baht = bahtxtNum2Word(bahtArr)
+  let satang = bahtxtNum2Word(satangArr)
 
   // grammar
-  baht = grammarFix(baht)
-  satang = grammarFix(satang)
+  baht = bahtxtGrammarFix(baht)
+  satang = bahtxtGrammarFix(satang)
 
   // combine
-  const result = combine(baht, satang)
+  const result = bahtxtCombine(baht, satang)
 
   return num >= 0 ? result : 'ลบ' + result
 }
@@ -119,9 +121,9 @@ if (typeof module !== 'undefined' &&
     bahttext,
 
     // export for testing only
-    num2Word,
-    grammarFix,
-    combine
+    bahtxtNum2Word,
+    bahtxtGrammarFix,
+    bahtxtCombine
   }
   exports.default = {
     bahttext
