@@ -74,12 +74,15 @@ function updateResult() {
   $result.html(html)
 }
 
-function init() {
+function randomNumber() {
+  const num = r.real(Number.MIN_SAFE_INTEGER, Number.MAX_SAFE_INTEGER)
+  $number.val(num)
   updateResult()
 }
 
 $(document).ready(function() {
-  init()
+  // init
+  randomNumber()
 
   // number
   $number.on('input', function(e) {
@@ -88,9 +91,7 @@ $(document).ready(function() {
 
   // random
   $random.click(function(e) {
-    const num = r.real(Number.MIN_SAFE_INTEGER, Number.MAX_SAFE_INTEGER)
-    $number.val(num)
-    updateResult()
+    randomNumber()
   })
 
   // example
