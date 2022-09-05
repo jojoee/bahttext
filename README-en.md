@@ -69,7 +69,6 @@ bahttext(-0.20) // ลบยี่สิบสตางค์
 - [x] Node.js version support: 6+
 - [x] 0 Dependencies
 - [x] Unit test
-- [ ] Browser compatibility test
 - [x] Remove duplication between test code and test-case-csv file
 - [x] [Demo page](https://jojoee.github.io/bahttext/)
 - [x] Support negative number
