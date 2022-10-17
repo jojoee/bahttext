@@ -68,7 +68,6 @@ describe('bahttext', () => {
     expect(bahttext('this-is-not-number')).toBe(zeroText)
     expect(bahttext('it-must-be-number-only')).toBe(zeroText)
     expect(bahttext('a123')).toBe(zeroText)
-
   })
 
   test('leading with zero', () => {
