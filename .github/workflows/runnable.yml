@@ -1,5 +1,5 @@
 name: runnable
-on: [push]
+on: [push, pull_request]
 
 defaults:
   run:
