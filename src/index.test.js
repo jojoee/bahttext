@@ -67,6 +67,15 @@ describe('bahttext', () => {
     expect(bahttext(undefined)).toBe(zeroText)
     expect(bahttext('this-is-not-number')).toBe(zeroText)
     expect(bahttext('it-must-be-number-only')).toBe(zeroText)
+    expect(bahttext('a123')).toBe(zeroText)
+
+  })
+
+  test('leading with zero', () => {
+    expect(bahttext('0.1')).toBe('สิบสตางค์')
+    expect(bahttext('01.1')).toBe('หนึ่งบาทสิบสตางค์')
+    expect(bahttext('-01.1')).toBe('ลบหนึ่งบาทสิบสตางค์')
+    expect(bahttext('000.01')).toBe('หนึ่งสตางค์')
   })
 
   test('less than Number.MIN_SAFE_INTEGER', () => {
