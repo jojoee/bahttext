@@ -69,6 +69,13 @@ describe('bahttext', () => {
     expect(bahttext('it-must-be-number-only')).toBe(zeroText)
   })
 
+  test('leading with zero', () => {
+    expect(bahttext('0.1')).toBe('สิบสตางค์')
+    expect(bahttext('01.1')).toBe('หนึ่งบาทสิบสตางค์')
+    expect(bahttext('-01.1')).toBe('ลบหนึ่งบาทสิบสตางค์')
+    expect(bahttext('000.01')).toBe('หนึ่งสตางค์')
+  })
+
   test('less than Number.MIN_SAFE_INTEGER', () => {
     const items = [1, 20, 9451, 5656549]
     for (let i = 0; i < items.length; i++) {
