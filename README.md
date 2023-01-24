@@ -8,6 +8,7 @@
 ![release](https://github.com/jojoee/bahttext/workflows/release/badge.svg?branch=master)
 ![runnable](https://github.com/jojoee/bahttext/workflows/runnable/badge.svg?branch=master)
 ![runnable old node](https://github.com/jojoee/bahttext/workflows/runnable%20old%20node/badge.svg?branch=master)
+[![Mutation testing badge](https://img.shields.io/endpoint?style=flat&url=https%3A%2F%2Fbadge-api.stryker-mutator.io%2Fgithub.com%2Fjojoee%2Fbahttext%2Fmaster)](https://dashboard.stryker-mutator.io/reports/github.com/jojoee/bahttext/master)
 
 ภาษา: [ไทย](https://github.com/jojoee/bahttext/blob/master/README.md), [English](https://github.com/jojoee/bahttext/blob/master/README-en.md)
 
@@ -88,6 +89,13 @@ csvtojson ./misc/testcases.csv | jq > ./misc/testcases.json
 # to update dependency version
 npm update --save
 npm audit fix --force
+
+# mutation test
+npm install -g stryker-cli
+stryker init
+export STRYKER_DASHBOARD_API_KEY=<the_project_api_token>
+echo $STRYKER_DASHBOARD_API_KEY
+npx stryker run
 ```
 
 ## อ้างอิง
