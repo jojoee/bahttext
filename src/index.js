@@ -37,13 +37,9 @@ function bahtxtNum2Word (nums) {
  * @returns {string}
  */
 function bahtxtGrammarFix (str) {
-  let result = str
-
-  result = result.replace(/หนึ่งสิบ/g, 'สิบ')
-  result = result.replace(/สองสิบ/g, 'ยี่สิบ')
-  result = result.replace(/สิบหนึ่ง/g, 'สิบเอ็ด')
-
-  return result
+  return str.replace(/หนึ่งสิบ/g, 'สิบ')
+    .replace(/สองสิบ/g, 'ยี่สิบ')
+    .replace(/สิบหนึ่ง/g, 'สิบเอ็ด')
 }
 
 /**
@@ -55,19 +51,15 @@ function bahtxtGrammarFix (str) {
  * @returns {string}
  */
 function bahtxtCombine (baht, satang) {
-  let result = ''
-
-  if (baht === '' && satang === '') {
-    result = bahtxtConst.defaultResult
-  } else if (baht !== '' && satang === '') {
-    result = baht + 'บาท' + 'ถ้วน'
-  } else if (baht === '' && satang !== '') {
-    result = satang + 'สตางค์'
+  if (!baht && !satang) {
+    return bahtxtConst.defaultResult
+  } else if (baht && !satang) {
+    return baht + 'บาท' + 'ถ้วน'
+  } else if (!baht && satang) {
+    return satang + 'สตางค์'
   } else {
-    result = baht + 'บาท' + satang + 'สตางค์'
+    return baht + 'บาท' + satang + 'สตางค์'
   }
-
-  return result
 }
 
 /**
@@ -77,16 +69,14 @@ function bahtxtCombine (baht, satang) {
  * @returns {string}
  */
 function bahttext (num) {
-  // no null
-  if (!num) return bahtxtConst.defaultResult
-  // no boolean
-  if (typeof num === 'boolean') return bahtxtConst.defaultResult
-  // must be number only
-  if (isNaN(Number(num))) return bahtxtConst.defaultResult
-  // not less than Number.MIN_SAFE_INTEGER
-  if (num < Number.MIN_SAFE_INTEGER) return bahtxtConst.defaultResult
-  // no more than Number.MAX_SAFE_INTEGER
-  if (num > Number.MAX_SAFE_INTEGER) return bahtxtConst.defaultResult
+  if (!num || // no null
+    typeof num === 'boolean' || // no boolean
+    isNaN(Number(num)) || // must be number only
+    num < Number.MIN_SAFE_INTEGER || // not less than Number.MIN_SAFE_INTEGER
+    num > Number.MAX_SAFE_INTEGER // no more than Number.MAX_SAFE_INTEGER
+  ) {
+    return bahtxtConst.defaultResult
+  }
 
   // set
   const positiveNum = Math.abs(num)
@@ -94,7 +84,7 @@ function bahttext (num) {
   // split baht and satang e.g. 432.214567 >> 432, 21
   const bahtStr = Math.floor(positiveNum).toString()
   /** @type {string} */
-  const satangStr = (positiveNum % 1 * 100).toFixed(2).split('.')[0]
+  const satangStr = (positiveNum % 1 * 100).toFixed(0)
 
   /** @type {number[]} */
   const bahtArr = Array.from(bahtStr).map(Number)
