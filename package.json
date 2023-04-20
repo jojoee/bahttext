@@ -36,10 +36,14 @@
   "devDependencies": {
     "@stryker-mutator/core": "^6.3.1",
     "@stryker-mutator/jest-runner": "^6.3.1",
+    "@to-da-moon/thai-baht-lib": "^0.0.12",
+    "baht": "^0.7.1",
     "jest": "^26.6.3",
     "jest-expect-message": "^1.0.2",
     "semantic-release": "^19.0.5",
-    "standard": "^15.0.1"
+    "standard": "^15.0.1",
+    "thai-baht-text": "^1.0.8",
+    "thai-baht-text-ts": "^1.1.0"
   },
   "jest": {
     "setupFilesAfterEnv": [
