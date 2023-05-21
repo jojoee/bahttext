@@ -4,8 +4,23 @@ const {
   bahtxtCombine: combine
 } = require('./index')
 const defaultResult = 'ศูนย์บาทถ้วน'
-const testCases = require('../misc/testcases.json')
+const groupedTestCasesKey = 'categoryCase'
+const googleSheetTestCases = require('../misc/testcases.json').map(item => {
+  item[groupedTestCasesKey] = `${item.category}-${item.case}`
+  return item
+})
 jest.autoMockOff()
+
+// TODO: move to somewhere else
+// TODO: write test
+function groupBy (arr, key) {
+  return arr.reduce((acc, curr) => {
+    acc[curr[key]] = (acc[curr[key]] || []).concat(curr)
+    return acc
+  }, {})
+}
+
+const groupedTestCases = groupBy(googleSheetTestCases, groupedTestCasesKey)
 
 // TODO: to be implemented
 describe('num2Word', () => {
@@ -91,11 +106,14 @@ describe('bahttext', () => {
     }
   })
 
-  test('numbers are imported from Google Sheet', () => {
-    for (let i = 0; i < testCases.length; i++) {
-      const customMessage = JSON.stringify(testCases[i])
-      const number = Number(testCases[i].number)
-      expect(bahttext(number), customMessage).toBe(testCases[i].text)
-    }
-  })
+  // numbers are imported from Google Sheets
+  for (const [groupedName, testCases] of Object.entries(groupedTestCases)) {
+    test(`imported Google Sheets: ${groupedName}`, () => {
+      for (let i = 0; i < testCases.length; i++) {
+        const customMessage = JSON.stringify(testCases[i])
+        const number = Number(testCases[i].number)
+        expect(bahttext(number), customMessage).toBe(testCases[i].text)
+      }
+    })
+  }
 })
