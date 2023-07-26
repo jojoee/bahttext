@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "declaration": true,
+    "allowJs": true,
+    "outDir": "./lib",
+    "strict": true,
+    "target": "es5",
+    "lib": [
+      "es6"
+    ],
+    "moduleResolution": "node"
+  },
+  "include": [
+    "src/index.js"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}

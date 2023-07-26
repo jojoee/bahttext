@@ -2,12 +2,13 @@
   "name": "bahttext",
   "version": "0.0.0-development",
   "description": "Change number to Thai pronunciation string",
-  "main": "src/index.js",
-  "typings": "src/index.js",
+  "main": "lib/index.js",
+  "typings": "lib/index.d.ts",
   "scripts": {
     "jest": "jest",
     "jest.watch": "jest --watch",
     "coverage.check": "jest --coverage",
+    "build": "tsc",
     "semantic-release": "semantic-release",
     "standard": "standard",
     "standard.fix": "standard --fix",
@@ -43,7 +44,8 @@
     "semantic-release": "^19.0.5",
     "standard": "^15.0.1",
     "thai-baht-text": "^1.0.8",
-    "thai-baht-text-ts": "^1.1.0"
+    "thai-baht-text-ts": "^1.1.0",
+    "typescript": "^5.1.6"
   },
   "jest": {
     "setupFilesAfterEnv": [

@@ -5,6 +5,7 @@ const bahtxtConst = {
 }
 
 /**
+ * @private
  * @param {number[]} nums
  * @returns {string}
  */
@@ -32,6 +33,7 @@ function bahtxtNum2Word (nums) {
 }
 
 /**
+ * @private
  * @todo improve performance
  * @param {string} str
  * @returns {string}
@@ -46,6 +48,7 @@ function bahtxtGrammarFix (str) {
  * bahtxtCombine baht and satang
  * and also adding unit
  *
+ * @private
  * @param {string} baht
  * @param {string} satang
  * @returns {string}
@@ -65,6 +68,7 @@ function bahtxtCombine (baht, satang) {
 /**
  * Change number to Thai pronunciation string
  *
+ * @public
  * @param {number} num
  * @returns {string}
  */
