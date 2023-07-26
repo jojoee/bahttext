@@ -1,10 +1,6 @@
 name: runnable
 on: [ push, pull_request ]
 
-defaults:
-  run:
-    working-directory: example
-
 jobs:
   runnable:
     runs-on: ubuntu-latest
@@ -31,7 +27,7 @@ jobs:
         run: npm run build
 
       - name: Run with CommonJS
-        run: node commonjs.js
+        run: node example/commonjs.js
 
       - name: Run with ES6
-        run: ts-node es6.ts
+        run: ts-node example/es6.ts
