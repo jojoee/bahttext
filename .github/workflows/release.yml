@@ -2,8 +2,8 @@ name: release
 
 on:
   workflow_run:
-    workflows: ["continuous integration"]
-    branches: [master]
+    workflows: [ "continuous integration" ]
+    branches: [ master ]
     types:
       - completed
 
@@ -15,7 +15,7 @@ jobs:
     if: ${{ github.event.workflow_run.conclusion == 'success' }}
     strategy:
       matrix:
-        node-version: [18.x]
+        node-version: [ 18.x ]
 
     steps:
       - name: Checkout

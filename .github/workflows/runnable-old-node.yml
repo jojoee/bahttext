@@ -1,5 +1,5 @@
 name: runnable old node
-on: [push, pull_request]
+on: [ push, pull_request ]
 
 defaults:
   run:
@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [6, 7, 8, 9]
+        node-version: [ 6, 7, 8, 9 ]
 
     steps:
       - name: Checkout
