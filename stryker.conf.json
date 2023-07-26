@@ -21,5 +21,10 @@
     "baseUrl": "https://dashboard.stryker-mutator.io/api/reports",
     "reportType": "full"
   },
-  "coverageAnalysis": "perTest"
+  "coverageAnalysis": "perTest",
+  "base-dir": "src",
+  "mutate": [
+    "src/index.js",
+    "!src/index.test.js"
+  ]
 }
