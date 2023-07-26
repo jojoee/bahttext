@@ -8,6 +8,7 @@ codecov.yaml
 misc
 reports
 coverage
+**/**/*.test.js
 
 # CI
 .github
