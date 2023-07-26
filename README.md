@@ -93,4 +93,3 @@ bahttext(-0.20) // ลบยี่สิบสตางค์
 - [Google Sheets BAHTTEXT function](https://support.google.com/docs/answer/9982303?hl=en)
 - [Microsoft Office's BAHTTEXT function](https://support.office.com/en-us/article/BAHTTEXT-function-5ba4d0b4-abd3-4325-8d22-7a92d59aab9c)
 - แรงบัลดาลใจจาก [earthchie/BAHTTEXT.js](https://github.com/earthchie/BAHTTEXT.js)
-
