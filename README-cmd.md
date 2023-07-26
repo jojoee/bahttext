@@ -20,6 +20,12 @@ export STRYKER_DASHBOARD_API_KEY=<the_project_api_token>
 echo $STRYKER_DASHBOARD_API_KEY
 npx stryker run
 
+# test demo
+node ./example/commonjs.js
+ts-node ./example/es6.ts
+(cd example && node remoteCommonjs.js)
+(cd example && ts-node remoteEs6.ts)
+
 ## npm
 npm run build
 npm publish --dry-run
