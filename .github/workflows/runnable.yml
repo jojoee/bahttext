@@ -27,6 +27,9 @@ jobs:
           npm install -g typescript
           npm install -g ts-node
 
+      - name: Build package
+        run: npm run build
+
       - name: Run with CommonJS
         run: node commonjs.js
 

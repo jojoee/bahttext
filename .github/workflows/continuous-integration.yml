@@ -32,13 +32,19 @@ jobs:
             ${{ runner.os }}-
 
       - name: Install dependencies
-        run: npm install
+        run: |
+          npm install
+          npm install -g typescript
+          npm install -g ts-node
 
       - name: Linting with Standard.js
         run: npm run standard
 
       - name: Test and test coverage
         run: npm run coverage.check
+
+      - name: Build package
+        run: npm run build
 
       - name: Mutation test
         env:
