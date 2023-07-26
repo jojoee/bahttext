@@ -77,14 +77,11 @@ bahttext(-0.20) // ลบยี่สิบสตางค์
 
 ## Note
 
-- [x] Compatible with all browsers
-- [x] Node.js version support: 6+
-- [x] 0 Dependencies
-- [x] Unit test
-- [x] Remove duplication between test code and test-case-csv file
-- [x] [Demo page](https://jojoee.github.io/bahttext/)
-- [x] Support negative number
-- [x] Fix semantic-release
+- Compatible with all browsers
+- Node.js version support: 6+
+- 0 Dependencies
+- Demo page
+- Support negative number
 
 ## Other languages
 
