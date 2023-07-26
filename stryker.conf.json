@@ -24,7 +24,6 @@
   "coverageAnalysis": "perTest",
   "base-dir": "src",
   "mutate": [
-    "src/index.js",
-    "!src/index.test.js"
+    "src/index.js"
   ]
 }

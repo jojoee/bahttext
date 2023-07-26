@@ -1,4 +1,4 @@
-import { bahttext } from '../lib'
+import { bahttext } from '../src'
 
 console.log(bahttext(8.00))
 console.log(bahttext(5678.00))

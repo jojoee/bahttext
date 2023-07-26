@@ -2,7 +2,9 @@
   "compilerOptions": {
     "declaration": true,
     "allowJs": true,
-    "outDir": "./lib",
+    "emitDeclarationOnly": true,
+    "declarationMap": false,
+    "outDir": "./src",
     "strict": true,
     "target": "es5",
     "lib": [
