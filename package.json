@@ -14,7 +14,7 @@
     "standard.fix": "standard --fix",
     "test": "jest",
     "test.watch": "jest --watch",
-    "validate": "npm run standard && npm run coverage.check"
+    "validate": "npm run standard && npm run coverage.check && npm run build"
   },
   "repository": {
     "type": "git",
@@ -45,7 +45,7 @@
     "standard": "^15.0.1",
     "thai-baht-text": "^1.0.8",
     "thai-baht-text-ts": "^1.1.0",
-    "typescript": "^5.1.6"
+    "typescript": "*"
   },
   "jest": {
     "setupFilesAfterEnv": [
