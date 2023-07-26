@@ -1,14 +1,26 @@
 # IDE & editor
 .idea
-!.vscode
+.vscode
 .editorconfig
 
 # test
 codecov.yaml
 misc
+reports
+coverage
 
 # CI
 .github
 
 # example
 example
+doc
+
+# others
+benchmark.js
+bower.json
+index.html
+src/
+stryker.conf.json
+tsconfig.json
+README-cmd.md
