@@ -1,4 +1,4 @@
-const { bahttext } = require('bahttext')
+const { bahttext } = require('../lib')
 
 console.log(bahttext(8.00))
 console.log(bahttext(5678.00))
