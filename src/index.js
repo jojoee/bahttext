@@ -5,9 +5,9 @@ const bahtxtConst = {
 }
 
 const GrammarFixs = [
-   {pat: /หนึ่งสิบ/g, replace:    'สิบ'}
-  ,{pat: /สองสิบ/g, replace:   'ยี่สิบ'}
-  ,{pat: /สิบหนึ่ง/g, replace: 'สิบเอ็ด'}
+  { pat: /หนึ่งสิบ/g, replace:    'สิบ' },
+  { pat: /สองสิบ/g, replace:   'ยี่สิบ' },
+  { pat: /สิบหนึ่ง/g, replace: 'สิบเอ็ด' }
 ]
 
 /**
@@ -45,7 +45,7 @@ function bahtxtNum2Word (nums) {
  * @returns {string}
  */
 function bahtxtGrammarFix (str) {
-  for (let GrammarFix of GrammarFixs) {
+  for (const GrammarFix of GrammarFixs) {
     str = str.replace(GrammarFix.pat, GrammarFix.replace)
   }
   return str
