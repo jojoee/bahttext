@@ -12,7 +12,7 @@ const bahtxtConst = {
 function bahtxtNum2Word (nums) {
   let result = ''
   const len = nums.length
-  const maxLen = 7
+  let maxLen = 7 
 
   if (len > maxLen) {
     // more than million
