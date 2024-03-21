@@ -5,8 +5,8 @@ const bahtxtConst = {
 }
 
 const GrammarFixs = [
-  { pat: /หนึ่งสิบ/g, replace:    'สิบ' },
-  { pat: /สองสิบ/g, replace:   'ยี่สิบ' },
+  { pat: /หนึ่งสิบ/g, replace: 'สิบ' },
+  { pat: /สองสิบ/g, replace: 'ยี่สิบ' },
   { pat: /สิบหนึ่ง/g, replace: 'สิบเอ็ด' }
 ]
 
