@@ -4,6 +4,12 @@ const bahtxtConst = {
   placeNameStrs: ['', 'สิบ', 'ร้อย', 'พัน', 'หมื่น', 'แสน', 'ล้าน']
 }
 
+const GrammarFixs = [
+  { pat: /หนึ่งสิบ/g, replace: 'สิบ' },
+  { pat: /สองสิบ/g, replace: 'ยี่สิบ' },
+  { pat: /สิบหนึ่ง/g, replace: 'สิบเอ็ด' }
+]
+
 /**
  * @private
  * @param {number[]} nums
@@ -21,10 +27,10 @@ function bahtxtNum2Word (nums) {
     const remainingNumbs = nums.slice(overflowIndex)
     return bahtxtNum2Word(overflowNums) + 'ล้าน' + bahtxtNum2Word(remainingNumbs)
   } else {
-    for (let i = 0; i < len; i++) {
-      const digit = nums[i]
+    for (const num in nums) {
+      const digit = nums[num]
       if (digit > 0) {
-        result += bahtxtConst.singleUnitStrs[digit] + bahtxtConst.placeNameStrs[len - i - 1]
+        result += bahtxtConst.singleUnitStrs[digit] + bahtxtConst.placeNameStrs[len - num - 1]
       }
     }
   }
@@ -39,9 +45,10 @@ function bahtxtNum2Word (nums) {
  * @returns {string}
  */
 function bahtxtGrammarFix (str) {
-  return str.replace(/หนึ่งสิบ/g, 'สิบ')
-    .replace(/สองสิบ/g, 'ยี่สิบ')
-    .replace(/สิบหนึ่ง/g, 'สิบเอ็ด')
+  for (const GrammarFix of GrammarFixs) {
+    str = str.replace(GrammarFix.pat, GrammarFix.replace)
+  }
+  return str
 }
 
 /**
