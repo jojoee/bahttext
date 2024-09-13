@@ -1,4 +1,9 @@
 const {
+  test,
+  expect,
+  describe
+} = require('@jest/globals')
+const {
   bahttext,
   bahtxtGrammarFix: grammarFix,
   bahtxtCombine: combine
@@ -9,6 +14,8 @@ const googleSheetTestCases = require('../misc/testcases.json').map(item => {
   item[groupedTestCasesKey] = `${item.category}-${item.case}`
   return item
 })
+
+/* eslint-disable-next-line no-undef */
 jest.autoMockOff()
 
 // TODO: move to somewhere else
@@ -110,9 +117,8 @@ describe('bahttext', () => {
   for (const [groupedName, testCases] of Object.entries(groupedTestCases)) {
     test(`imported Google Sheets: ${groupedName}`, () => {
       for (let i = 0; i < testCases.length; i++) {
-        const customMessage = JSON.stringify(testCases[i])
         const number = Number(testCases[i].number)
-        expect(bahttext(number), customMessage).toBe(testCases[i].text)
+        expect(bahttext(number)).toBe(testCases[i].text)
       }
     })
   }
