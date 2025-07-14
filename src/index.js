@@ -1,150 +1,254 @@
-const bahtxtConst = {
-  defaultResult: 'ศูนย์บาทถ้วน',
-  singleUnitStrs: ['', 'หนึ่ง', 'สอง', 'สาม', 'สี่', 'ห้า', 'หก', 'เจ็ด', 'แปด', 'เก้า'],
-  placeNameStrs: ['', 'สิบ', 'ร้อย', 'พัน', 'หมื่น', 'แสน', 'ล้าน']
-}
+const EMPTY = ''
+const ONE = 'หนึ่ง'
+const TWO = 'สอง'
+const THREE_TO_NINE = ['สาม', 'สี่', 'ห้า', 'หก', 'เจ็ด', 'แปด', 'เก้า']
+const ED = 'เอ็ด'
+const YEE = 'ยี่'
+const LAN = 'ล้าน'
 
-const GrammarFixs = [
-  { pat: /หนึ่งสิบ/g, replace: 'สิบ' },
-  { pat: /สองสิบ/g, replace: 'ยี่สิบ' },
-  { pat: /สิบหนึ่ง/g, replace: 'สิบเอ็ด' }
+// Index 0-5 correspond to units,สิบ,ร้อย,พัน,หมื่น,แสน
+const DIGIT = [EMPTY, 'สิบ', 'ร้อย', 'พัน', 'หมื่น', 'แสน']
+
+// Helpers to build word tables quickly
+const ONES = [EMPTY, ED, TWO, ...THREE_TO_NINE]
+const TENS = [
+  EMPTY,
+  ...[EMPTY, YEE, ...THREE_TO_NINE].map(t => t + DIGIT[1]) // "สิบ" family
 ]
+// 0-99 lookup (fast satang conversion)
+const SUB_HUNDRED = TENS.flatMap(t => ONES.map(o => t + o))
+// Special case: 1 should read "หนึ่ง" not "เอ็ด"
+SUB_HUNDRED[1] = ONE
+
+// Single-digit lookup for generic conversion (no suffix)
+const SUB_TEN = [EMPTY, ONE, TWO, ...THREE_TO_NINE]
+
+// Pre-compiled constants for frequently used combinations
+const YEE_SIB = YEE + DIGIT[1] // "ยี่สิบ"
+const SIB = DIGIT[1] // "สิบ"
+
+// Default fallback text used throughout tests
+const DEFAULT_RESULT = 'ศูนย์บาทถ้วน'
+
+/**
+ * Convert number → Thai Baht text (supports number or numeric string)
+ * Mirrors behaviour of previous implementation but with faster core.
+ *
+ * @public
+ * @param {number|string} input
+ * @returns {string}
+ */
+function bahttext (input) {
+  // Early invalidation – keep behaviour expected by test suite
+  if (input === null || input === undefined ||
+    typeof input === 'boolean' || Array.isArray(input) ||
+    (typeof input !== 'number' && typeof input !== 'string')) {
+    return DEFAULT_RESULT
+  }
+
+  const converted = convertInternal(input)
+  return converted === false ? DEFAULT_RESULT : converted
+}
 
 /**
  * @private
- * @param {number[]} nums
+ * @param {string} numStr – e.g. "123" (no sign, may include leading zeros)
  * @returns {string}
  */
-function bahtxtNum2Word (nums) {
-  /**
-   * Converts a numeric string (or legacy digit array) into Thai words without unit suffix.
-   * The new implementation iterates over the input string directly, eliminating
-   * the intermediate `Array.from(...).map(Number)` allocations previously used.
-   *
-   * @param {string|number[]} nums – string of digits ("123") or array \[1,2,3].
-   * @returns {string}
-   */
-  let numStr = ''
+function numberToWords (numStr) {
+  // Short-circuit trivial "0"
+  if (numStr === '0') return ''
 
-  if (typeof nums === 'string') {
-    numStr = nums
-  } else if (Array.isArray(nums)) {
-    numStr = nums.join('')
-  } else {
-    return ''
-  }
-
-  // Trim leading zeros but leave at least one digit so "0" stays "0"
-  numStr = numStr.replace(/^0+/, '') || '0'
-
+  let output = EMPTY
   const len = numStr.length
-  const maxLen = 7 // handle up to 6-digit group + 1-digit look-ahead for "ล้าน" logic
 
-  if (len > maxLen) {
-    const overflowIndex = len - maxLen + 1
-    const overflowStr = numStr.slice(0, overflowIndex)
-    const remainingStr = numStr.slice(overflowIndex)
-    return bahtxtNum2Word(overflowStr) + 'ล้าน' + bahtxtNum2Word(remainingStr)
-  }
-
-  let result = ''
   for (let i = 0; i < len; i++) {
-    const digit = numStr.charCodeAt(i) - 48 // faster than parseInt(numStr[i], 10)
-    if (digit > 0) {
-      result +=
-        bahtxtConst.singleUnitStrs[digit] +
-        bahtxtConst.placeNameStrs[len - i - 1]
+    const d = numStr[i]
+    const di = len - i - 1 // distance from rightmost digit
+    const diMod = di % 6 // position inside a 6-digit group
+
+    if (d === '0') {
+      // skip zero – no wording
+    } else if (diMod === 1) {
+      // tens column inside group
+      if (d === '1') {
+        // "สิบ"
+        output += SIB
+      } else if (d === '2') {
+        // "ยี่สิบ"
+        output += YEE_SIB
+      } else {
+        const digitCode = d.charCodeAt(0) - 48
+        output += SUB_TEN[digitCode] + DIGIT[diMod]
+      }
+    } else if (diMod === 0 && d === '1' && i !== 0) {
+      // trailing 1 (in ones place, not first digit in overall number) → "เอ็ด"
+      // BUT: if it's a stand-alone digit in hundreds place (like 201), use "หนึ่ง"
+      const isStandAloneInHundreds = (di === 0 && len > 1 && numStr[i - 1] === '0')
+      output += isStandAloneInHundreds ? ONE : ED
+    } else {
+      const digitCode = d.charCodeAt(0) - 48 // faster than Number(d)
+      output += SUB_TEN[digitCode] + DIGIT[diMod]
+    }
+
+    // add "ล้าน" after finishing each 6-digit block (except last group)
+    if (diMod === 0 && di) {
+      output += LAN
     }
   }
 
-  return result
+  return output
 }
 
 /**
  * @private
- * @todo improve performance
- * @param {string} str
- * @returns {string}
+ * Handle numeric input and extract baht/satang values
+ * @param {number} input - numeric input (positive or negative)
+ * @returns {{baht: number, bahtStr: string, satang: number, isNegative: boolean} | false}
  */
-function bahtxtGrammarFix (str) {
-  for (const GrammarFix of GrammarFixs) {
-    str = str.replace(GrammarFix.pat, GrammarFix.replace)
+function handleNumericInput (input) {
+  if (!Number.isFinite(input)) return false
+  if (input < Number.MIN_SAFE_INTEGER || input > Number.MAX_SAFE_INTEGER) {
+    return false
   }
-  return str
+
+  const isNegative = input < 0
+  if (isNegative) {
+    input = -input
+  }
+
+  const baht = Math.floor(input)
+  const satang = Number.isInteger(input)
+    ? 0
+    : Math.floor(((input + Number.EPSILON * (baht || 1)) * 100) % 100)
+  const bahtStr = baht.toString() // slightly faster than String(baht)
+
+  return { baht, bahtStr, satang, isNegative }
 }
 
 /**
- * bahtxtCombine baht and satang
- * and also adding unit
- *
  * @private
- * @param {string} baht
- * @param {string} satang
- * @returns {string}
+ * Handle string input and extract baht/satang values
+ * @param {string} input - string input (numeric string, positive or negative)
+ * @returns {{baht: number, bahtStr: string, satang: number, isNegative: boolean} | false}
  */
-function bahtxtCombine (baht, satang) {
-  if (!baht && !satang) {
-    return bahtxtConst.defaultResult
-  } else if (baht && !satang) {
-    return baht + 'บาท' + 'ถ้วน'
-  } else if (!baht && satang) {
-    return satang + 'สตางค์'
+function handleStringInput (input) {
+  let formatted = input.trim()
+
+  if (formatted.startsWith('-')) {
+    formatted = formatted.replace(/^-0+/, '-') // keep sign, drop leading zeros
+    if (formatted === '-') formatted = '0' // catch "-" or "-0"
   } else {
-    return baht + 'บาท' + satang + 'สตางค์'
+    formatted = formatted.replace(/^0+/, '') || '0' // combine with empty check
+  }
+
+  // Not a valid number?
+  if (formatted === '') formatted = '0'
+  let inputNum = Number(formatted)
+  if (Number.isNaN(inputNum)) return false
+
+  const isNegative = inputNum < 0
+  if (isNegative) {
+    inputNum = -inputNum
+    // remove sign for string slicing later
+    formatted = formatted.slice(1)
+  }
+
+  // Safe-range check after absolute value
+  if (inputNum < Number.MIN_SAFE_INTEGER || inputNum > Number.MAX_SAFE_INTEGER) {
+    return false
+  }
+
+  let baht, bahtStr, satang, satangStr
+
+  // Handle decimal part by string slicing to avoid FP errors
+  const periodIdx = formatted.lastIndexOf('.')
+  if (periodIdx !== -1) {
+    bahtStr = formatted.slice(0, periodIdx) || '0'
+    baht = Number(bahtStr)
+
+    satangStr = formatted.slice(periodIdx + 1)
+    satang = satangStr
+      ? Number(satangStr.slice(0, 2)) * (satangStr.length >= 2 ? 1 : [100, 10][satangStr.length])
+      : 0
+  } else {
+    baht = inputNum
+    bahtStr = formatted
+    satang = 0
+  }
+
+  return { baht, bahtStr, satang, isNegative }
+}
+
+/**
+ * @private
+ * Format satang portion of the output
+ * @param {number} baht - baht amount
+ * @param {number} satang - satang amount
+ * @returns {string} formatted satang string
+ */
+function formatSatang (baht, satang) {
+  if (satang) {
+    let output = ''
+    if (baht) output += 'บาท'
+    output += SUB_HUNDRED[satang] + 'สตางค์'
+    return output
+  } else {
+    return 'บาทถ้วน'
   }
 }
 
 /**
- * Change number to Thai pronunciation string
- *
- * @public
- * @param {number} num
- * @returns {string}
+ * @private
+ * Returns false when input cannot be parsed as numeric.
  */
-function bahttext (num) {
-  if (num === null || num === undefined || // explicit null/undefined check, allow 0
-    typeof num === 'boolean' || // no boolean
-    isNaN(Number(num)) || // must be numeric coercible
-    num < Number.MIN_SAFE_INTEGER || // outside JS safe integer range
-    num > Number.MAX_SAFE_INTEGER
-  ) {
-    return bahtxtConst.defaultResult
+function convertInternal (input) {
+  let baht, bahtStr, satang
+  let isNegative = false
+
+  if (typeof input === 'number') {
+    // Numeric input handling
+    const result = handleNumericInput(input)
+    if (result === false) return false
+
+    baht = result.baht
+    bahtStr = result.bahtStr
+    satang = result.satang
+    isNegative = result.isNegative
+  } else if (typeof input === 'string') {
+    // String input handling
+    const result = handleStringInput(input)
+    if (result === false) return false
+
+    baht = result.baht
+    bahtStr = result.bahtStr
+    satang = result.satang
+    isNegative = result.isNegative
+  } else {
+    // unreachable due to early guard, but for safety
+    return false
   }
 
-  // normalise sign & prepare parts
-  const positiveNum = Math.abs(Number(num))
+  // No value at all → zero
+  if (!baht && !satang) {
+    return DEFAULT_RESULT
+  }
 
-  const bahtPart = Math.floor(positiveNum)
+  // Build output
+  let output = isNegative ? 'ลบ' : EMPTY
 
-  const bahtStr = String(bahtPart)
-  // Keep original rounding behaviour ("toFixed(0)") to avoid output drift
-  const satangStr = (positiveNum % 1 * 100).toFixed(0)
+  // Baht part – using fast converter
+  const bahtWords = numberToWords(bahtStr)
+  output += bahtWords
 
-  // Convert directly without creating intermediate digit arrays
-  let baht = bahtxtNum2Word(bahtStr)
-  let satang = bahtxtNum2Word(satangStr)
+  // Satang
+  output += formatSatang(baht, satang)
 
-  // grammar
-  baht = bahtxtGrammarFix(baht)
-  satang = bahtxtGrammarFix(satang)
-
-  // combine
-  const result = bahtxtCombine(baht, satang)
-
-  return num >= 0 ? result : 'ลบ' + result
+  return output
 }
 
-if (typeof module !== 'undefined' &&
-  module.exports != null) {
-  module.exports = {
-    bahttext,
-
-    // export for testing only
-    bahtxtNum2Word,
-    bahtxtGrammarFix,
-    bahtxtCombine
-  }
-  exports.default = {
-    bahttext
-  }
+module.exports = {
+  bahttext
 }
+
+exports.default = { bahttext }
