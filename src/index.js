@@ -16,7 +16,11 @@ const TENS = [
   ...[EMPTY, YEE, ...THREE_TO_NINE].map(t => t + DIGIT[1]) // "สิบ" family
 ]
 // 0-99 lookup (fast satang conversion)
-const SUB_HUNDRED = TENS.flatMap(t => ONES.map(o => t + o))
+const SUB_HUNDRED = TENS.reduce(
+  (acc, t) => acc.concat(ONES.map(o => t + o)),
+  []
+)
+
 // Special case: 1 should read "หนึ่ง" not "เอ็ด"
 SUB_HUNDRED[1] = ONE
 
