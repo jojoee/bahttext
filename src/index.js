@@ -248,7 +248,11 @@ function convertInternal (input) {
 }
 
 module.exports = {
-  bahttext
+  bahttext,
+  // Export private functions for testing
+  handleNumericInput,
+  handleStringInput,
+  formatSatang
 }
 
 exports.default = { bahttext }
