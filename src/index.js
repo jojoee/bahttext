@@ -16,22 +16,44 @@ const GrammarFixs = [
  * @returns {string}
  */
 function bahtxtNum2Word (nums) {
-  let result = ''
-  const len = nums.length
-  const maxLen = 7
+  /**
+   * Converts a numeric string (or legacy digit array) into Thai words without unit suffix.
+   * The new implementation iterates over the input string directly, eliminating
+   * the intermediate `Array.from(...).map(Number)` allocations previously used.
+   *
+   * @param {string|number[]} nums – string of digits ("123") or array \[1,2,3].
+   * @returns {string}
+   */
+  let numStr = ''
+
+  if (typeof nums === 'string') {
+    numStr = nums
+  } else if (Array.isArray(nums)) {
+    numStr = nums.join('')
+  } else {
+    return ''
+  }
+
+  // Trim leading zeros but leave at least one digit so "0" stays "0"
+  numStr = numStr.replace(/^0+/, '') || '0'
+
+  const len = numStr.length
+  const maxLen = 7 // handle up to 6-digit group + 1-digit look-ahead for "ล้าน" logic
 
   if (len > maxLen) {
-    // more than million
     const overflowIndex = len - maxLen + 1
-    const overflowNums = nums.slice(0, overflowIndex)
-    const remainingNumbs = nums.slice(overflowIndex)
-    return bahtxtNum2Word(overflowNums) + 'ล้าน' + bahtxtNum2Word(remainingNumbs)
-  } else {
-    for (const num in nums) {
-      const digit = nums[num]
-      if (digit > 0) {
-        result += bahtxtConst.singleUnitStrs[digit] + bahtxtConst.placeNameStrs[len - num - 1]
-      }
+    const overflowStr = numStr.slice(0, overflowIndex)
+    const remainingStr = numStr.slice(overflowIndex)
+    return bahtxtNum2Word(overflowStr) + 'ล้าน' + bahtxtNum2Word(remainingStr)
+  }
+
+  let result = ''
+  for (let i = 0; i < len; i++) {
+    const digit = numStr.charCodeAt(i) - 48 // faster than parseInt(numStr[i], 10)
+    if (digit > 0) {
+      result +=
+        bahtxtConst.singleUnitStrs[digit] +
+        bahtxtConst.placeNameStrs[len - i - 1]
     }
   }
 
@@ -80,31 +102,27 @@ function bahtxtCombine (baht, satang) {
  * @returns {string}
  */
 function bahttext (num) {
-  if (!num || // no null
+  if (num === null || num === undefined || // explicit null/undefined check, allow 0
     typeof num === 'boolean' || // no boolean
-    isNaN(Number(num)) || // must be number only
-    num < Number.MIN_SAFE_INTEGER || // not less than Number.MIN_SAFE_INTEGER
-    num > Number.MAX_SAFE_INTEGER // no more than Number.MAX_SAFE_INTEGER
+    isNaN(Number(num)) || // must be numeric coercible
+    num < Number.MIN_SAFE_INTEGER || // outside JS safe integer range
+    num > Number.MAX_SAFE_INTEGER
   ) {
     return bahtxtConst.defaultResult
   }
 
-  // set
-  const positiveNum = Math.abs(num)
+  // normalise sign & prepare parts
+  const positiveNum = Math.abs(Number(num))
 
-  // split baht and satang e.g. 432.214567 >> 432, 21
-  const bahtStr = Math.floor(positiveNum).toString()
-  /** @type {string} */
+  const bahtPart = Math.floor(positiveNum)
+
+  const bahtStr = String(bahtPart)
+  // Keep original rounding behaviour ("toFixed(0)") to avoid output drift
   const satangStr = (positiveNum % 1 * 100).toFixed(0)
 
-  /** @type {number[]} */
-  const bahtArr = Array.from(bahtStr).map(Number)
-  /** @type {number[]} */
-  const satangArr = Array.from(satangStr).map(Number)
-
-  // proceed
-  let baht = bahtxtNum2Word(bahtArr)
-  let satang = bahtxtNum2Word(satangArr)
+  // Convert directly without creating intermediate digit arrays
+  let baht = bahtxtNum2Word(bahtStr)
+  let satang = bahtxtNum2Word(satangStr)
 
   // grammar
   baht = bahtxtGrammarFix(baht)
