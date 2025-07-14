@@ -3,6 +3,7 @@
 [![Version - npm](https://img.shields.io/npm/v/bahttext.svg)](https://www.npmjs.com/package/bahttext)
 [![Download - npm](https://img.shields.io/npm/dt/bahttext.svg)](https://www.npmjs.com/package/bahttext)
 [![License - npm](https://img.shields.io/npm/l/bahttext.svg)](http://opensource.org/licenses/MIT)
+[![install size](https://packagephobia.com/badge?p=bahttext)](https://packagephobia.com/result?p=bahttext)
 [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg?style=flat-square)](https://github.com/semantic-release/semantic-release) [![Greenkeeper badge](https://badges.greenkeeper.io/jojoee/bahttext.svg)](https://greenkeeper.io/)
 [![Codecov](https://img.shields.io/codecov/c/github/jojoee/bahttext.svg)](https://codecov.io/github/jojoee/bahttext)
 [![Mutation testing badge](https://img.shields.io/endpoint?style=flat&url=https%3A%2F%2Fbadge-api.stryker-mutator.io%2Fgithub.com%2Fjojoee%2Fbahttext%2Fmaster)](https://dashboard.stryker-mutator.io/reports/github.com/jojoee/bahttext/master)
