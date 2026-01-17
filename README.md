@@ -28,6 +28,8 @@ const { bahttext } = require('bahttext')
 // ES6
 npm install bahttext
 import { bahttext } from "bahttext"
+
+// TypeScript declarations included
 ```
 
 ## Example usage
@@ -59,6 +61,11 @@ bahttext(-1.04) // ลบหนึ่งบาทสี่สตางค์
 bahttext(-574.45) // ลบห้าร้อยเจ็ดสิบสี่บาทสี่สิบห้าสตางค์
 bahttext(-345.23) // ลบสามร้อยสี่สิบห้าบาทยี่สิบสามสตางค์
 bahttext(-0.20) // ลบยี่สิบสตางค์
+
+// String input
+bahttext("123.45") // หนึ่งร้อยยี่สิบสามบาทสี่สิบห้าสตางค์
+bahttext("0.1") // สิบสตางค์
+bahttext("-5.50") // ลบห้าบาทห้าสิบสตางค์
 ```
 
 ## Note
@@ -68,6 +75,9 @@ bahttext(-0.20) // ลบยี่สิบสตางค์
 - 0 Dependencies
 - Demo page
 - Support negative number
+- Accepts both number and string input
+- TypeScript declarations included
+- Invalid input returns "ศูนย์บาทถ้วน"
 
 ## Reference
 
