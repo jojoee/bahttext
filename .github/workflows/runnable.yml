@@ -35,13 +35,10 @@ jobs:
           node-version: ${{ matrix.node-version }}
 
       - name: Install dependencies
-        run: |
-          npm install
-          npm install -g typescript
-          npm install -g ts-node
+        run: npm install bahttext
 
       - name: Run with CommonJS
-        run: node example/commonjs.js
+        run: node commonjs.js
 
       - name: Run with ES6
-        run: ts-node example/es6.ts
+        run: npx ts-node es6.ts
