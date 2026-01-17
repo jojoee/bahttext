@@ -17,10 +17,6 @@ reports
 # OS
 .DS_Store
 
-# lock
-yarn.lock
-package-lock.json
-
 # log
 *.log
 
