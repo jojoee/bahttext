@@ -38,8 +38,8 @@
     "node": ">=18"
   },
   "devDependencies": {
-    "@stryker-mutator/core": "^8.7.1",
-    "@stryker-mutator/jest-runner": "^8.7.1",
+    "@stryker-mutator/core": "^9.4.0",
+    "@stryker-mutator/jest-runner": "^9.4.0",
     "baht": "^0.7.1",
     "bahttext230": "npm:bahttext@2.3.0",
     "bahttext231": "npm:bahttext@2.3.1",
