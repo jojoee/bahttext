@@ -1,0 +1,59 @@
+---
+description: Development commands and workflows for bahttext project
+globs: bahttext/**
+---
+
+# bahttext Development Commands
+
+## Test Data Management
+
+Fetch test cases from Google Sheets:
+
+```bash
+brew install curl
+brew install jq
+npm install -g csvtojson
+curl -L -o ./misc/testcases.csv https://docs.google.com/spreadsheets/d/e/2PACX-1vTb8PIKzgo07rn9UpcjqE0YrdMAmf4fyDbL2plUieLCyrn_5O3vDvece7UfkaArWQLUSsaw92jVpY_z/pub?gid=0&single=true&output=csv
+csvtojson ./misc/testcases.csv | jq > ./misc/testcases.json
+```
+
+## Dependency Management
+
+Update dependencies:
+
+```bash
+npm update --save
+npm audit fix --force
+```
+
+## Mutation Testing
+
+Setup and run mutation tests:
+
+```bash
+npm install -g stryker-cli
+stryker init
+export STRYKER_DASHBOARD_API_KEY=<the_project_api_token>
+echo $STRYKER_DASHBOARD_API_KEY
+npx stryker run
+```
+
+## Demo Testing
+
+Test demo examples:
+
+```bash
+node ./example/commonjs.js
+ts-node ./example/es6.ts
+(cd example && node remoteCommonjs.js)
+(cd example && ts-node remoteEs6.ts)
+```
+
+## Publishing
+
+Build and publish:
+
+```bash
+npm run build
+npm publish --dry-run
+```
