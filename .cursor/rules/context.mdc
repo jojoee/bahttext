@@ -1,0 +1,77 @@
+---
+description: bahttext project context and conventions
+globs:
+alwaysApply: true
+---
+
+# bahttext Project
+
+A JavaScript library to convert numbers to Thai Baht pronunciation text. Compatible with Google Sheets BAHTTEXT function. See [README.md](../../README.md) for full documentation (API, usage examples).
+
+## Project Structure
+
+```
+bahttext/
+├── src/
+│   ├── index.js       # Main source (all logic)
+│   ├── index.d.ts     # TypeScript declarations
+│   └── index.test.js  # Jest tests
+├── misc/              # Test data from Google Sheets
+├── example/           # CommonJS, ES6, HTML examples
+├── doc/               # Multi-language README translations
+└── coverage/          # Test coverage reports
+```
+
+## Technology Stack
+
+- JavaScript (ES6) with JSDoc type annotations
+- Jest for testing (with 80% coverage threshold)
+- Standard.js for linting
+- Stryker for mutation testing
+- TypeScript (declaration generation only)
+- semantic-release for versioning
+- Zero runtime dependencies
+
+## Code Conventions
+
+- Single source file architecture (`src/index.js`)
+- Public function: `bahttext(input)` - accepts number or numeric string
+- Helper functions: `numberToWords`, `handleNumericInput`, `handleStringInput`, `formatSatang`
+- Uses lookup tables for Thai words (ONES, TENS, SUB_HUNDRED, DIGIT)
+- CommonJS module exports with default export
+- Use JSDoc for type annotations with @param, @returns, @public, @private
+
+## Testing Conventions
+
+- Test file: `src/index.test.js`
+- Use Jest with describe/test pattern
+- Import from `'@jest/globals'`: `const { test, expect, describe } = require('@jest/globals')`
+- Test cases imported from Google Sheets (`misc/testcases.json`)
+- Export private functions for unit testing
+- Group tests by function name using describe blocks
+
+## Verification Steps
+
+Before committing changes, run these verification steps:
+
+1. **Linting**: `npm run standard` - Check code style with Standard.js
+2. **Unit Tests**: `npm run test` - Verify all tests pass
+3. **Code Coverage**: `npm run coverage.check` - Check 80% coverage threshold
+4. **Build**: `npm run build` - Generate TypeScript declarations
+5. **Full Validation**: `npm run validate` - Run all checks (standard + coverage + build)
+
+## Error Handling
+
+- Return default "ศูนย์บาทถ้วน" for invalid input (null, undefined, boolean, array, object, non-numeric string)
+- Validate input type (number or numeric string only)
+- Handle safe integer range boundaries (Number.MIN_SAFE_INTEGER to Number.MAX_SAFE_INTEGER)
+- Never throw errors from public API
+
+## Post-Work
+
+After implementing a feature:
+
+1. **Update README.md** - Document new functionality or API changes (update both Thai and English versions)
+2. **Update test cases** - Add test cases to `misc/testcases.json` if needed
+3. **Update examples** - Update `example/` files if API changes
+4. **Git commit** - Use semantic-release pattern (feat:, fix:, docs:, etc.)
