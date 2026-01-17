@@ -69,10 +69,6 @@ bahttext(-0.20) // ลบยี่สิบสตางค์
 - Demo page
 - Support negative number
 
-## Other languages
-
-- Python: [jojoee/pybaht](https://github.com/jojoee/pybaht)
-
 ## Reference
 
 - [Google Sheets BAHTTEXT function](https://support.google.com/docs/answer/9982303?hl=en)
