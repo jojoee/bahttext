@@ -68,7 +68,7 @@ bahttext(-0.20) // ลบยี่สิบสตางค์
 ## Note
 
 - Compatible with all browsers
-- Node.js version support: 6+
+- Node.js version support: 18+
 - 0 Dependencies
 - Demo page
 - Support negative number
