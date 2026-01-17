@@ -28,15 +28,6 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Install dependencies
-        run: |
-          npm install
-          npm install -g typescript
-          npm install -g ts-node
-
-      - name: Build package
-        run: npm run build
-
       - name: Semantic Release
         uses: cycjimmy/semantic-release-action@v4
         env:
