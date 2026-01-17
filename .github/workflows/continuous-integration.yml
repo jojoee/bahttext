@@ -45,10 +45,7 @@ jobs:
             ${{ runner.os }}-
 
       - name: Install dependencies
-        run: |
-          npm install
-          npm install -g typescript
-          npm install -g ts-node
+        run: npm install
 
       - name: Linting with Standard.js
         run: npm run standard
