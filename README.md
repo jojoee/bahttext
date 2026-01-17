@@ -22,10 +22,6 @@ against [Google Sheets BAHTTEXT function](https://support.google.com/docs/answer
 npm install bahttext
 const { bahttext } = require('bahttext')
 
-// Bower
-bower install bahttext
-<script src="bower_components/bahttext/src/index.js"></script>
-
 // githack
 <script src="https://raw.githack.com/jojoee/bahttext/master/src/index.js"></script>
 
