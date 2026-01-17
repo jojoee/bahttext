@@ -34,6 +34,9 @@
     "url": "https://github.com/jojoee/bahttext/issues"
   },
   "homepage": "https://github.com/jojoee/bahttext#readme",
+  "engines": {
+    "node": ">=18"
+  },
   "devDependencies": {
     "@stryker-mutator/core": "^8.7.1",
     "@stryker-mutator/jest-runner": "^8.7.1",
