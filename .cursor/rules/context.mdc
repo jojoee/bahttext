@@ -67,6 +67,18 @@ Before committing changes, run these verification steps:
 - Handle safe integer range boundaries (Number.MIN_SAFE_INTEGER to Number.MAX_SAFE_INTEGER)
 - Never throw errors from public API
 
+## Benchmark Workflow
+
+Before and after performance optimizations:
+
+1. **Run comparison**: `./benchmark-compare.sh <improvement-branch> [baseline-branch]`
+   - Default baseline is `master`
+   - Results appended to `benchmark-log.csv`
+
+2. **Check results**: Review summary output or `benchmark-log.csv` for improvement percentage
+
+3. **Manual benchmark**: `node benchmark.js` - runs benchmark and logs to CSV
+
 ## Post-Work
 
 After implementing a feature:

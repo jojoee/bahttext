@@ -24,5 +24,8 @@ reports
 *.xlsx
 *.csv
 
+# benchmark
+benchmark-log.csv
+
 # dist
 index.d.ts
