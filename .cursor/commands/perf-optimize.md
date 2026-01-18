@@ -22,10 +22,15 @@ Identify potential optimizations in the hot path. Common areas to consider:
 Before any changes, run benchmark on master branch:
 
 ```bash
-cd bahttext && git checkout master && node benchmark.js
+cd bahttext && git checkout master && node benchmark.js "baseline measurement"
+cd bahttext && git checkout perf/position-counter && node benchmark.js "use decrementing counter instead of modulo"
 ```
 
-Record the baseline mean and std from `benchmark-log.csv`.
+Record the baseline mean and std from `benchmark-log.csv`. Then manually update the `result` column to "baseline".
+
+**Benchmark usage:** `node benchmark.js "<details>"`
+- `details`: One sentence describing the optimization concept
+- `result` column is left empty, update manually after comparing with baseline
 
 ## Step 3: Create Optimization Branch
 
@@ -56,10 +61,10 @@ All tests must pass before proceeding.
 ## Step 6: Run Benchmark
 
 ```bash
-node benchmark.js
+node benchmark.js "description of optimization"
 ```
 
-Results are automatically logged to `benchmark-log.csv` with branch name.
+Results are automatically logged to `benchmark-log.csv` with branch name and details. The `result` column is left empty.
 
 ## Step 7: Decision Criteria
 
@@ -73,7 +78,12 @@ Compare against master baseline:
 
 ## Step 8: Handle Results
 
+After comparing benchmark results, update the last row in `benchmark-log.csv` with the result decision.
+
 ### If Better (merge):
+
+1. Update CSV result column: `-X.X% faster MERGED`
+2. Create benchmark note and merge:
 
 ```bash
 # Create benchmark note
@@ -97,6 +107,9 @@ git branch -d perf/<optimization-name>
 ```
 
 ### If Not Better (delete branch):
+
+1. Update CSV result column: `+X.X% slower REJECTED` or `-X.X% (noise) REJECTED`
+2. Delete the branch:
 
 ```bash
 git checkout master

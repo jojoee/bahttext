@@ -12,6 +12,12 @@ const numbers = testcases.map(item => parseFloat(item.number))
 const nSamples = 10
 const nIterations = 10000
 
+// Command line argument for details column
+// Usage: node benchmark.js "optimization description"
+// Result column is left empty - update manually after comparing with baseline
+const args = process.argv.slice(2)
+const details = args[0] || ''
+
 // NOTE: No warm-up run implemented. First iteration may include JIT compilation overhead.
 // For more accurate results, consider adding warm-up runs in future versions.
 
@@ -95,10 +101,22 @@ function getBranchName () {
  * @param {string} filepath
  */
 function ensureCsvHeader (filepath) {
-  const header = 'datetime,branch_name,sample,iterations_per_sample,test_cases,mean,std,min,max\n'
+  const header = 'datetime,branch_name,sample,iterations_per_sample,test_cases,mean,std,min,max,details,result\n'
   if (!fs.existsSync(filepath)) {
     fs.writeFileSync(filepath, header)
   }
+}
+
+/**
+ * Escape CSV field (wrap in quotes if contains comma or quote)
+ * @param {string} field
+ * @returns {string}
+ */
+function escapeCsvField (field) {
+  if (field.includes(',') || field.includes('"') || field.includes('\n')) {
+    return '"' + field.replace(/"/g, '""') + '"'
+  }
+  return field
 }
 
 /**
@@ -119,7 +137,9 @@ function appendToCsv (filepath, result) {
     result.mean.toFixed(2),
     result.std.toFixed(2),
     result.min.toFixed(2),
-    result.max.toFixed(2)
+    result.max.toFixed(2),
+    escapeCsvField(details),
+    '' // result column - update manually after comparing with baseline
   ].join(',') + '\n'
 
   fs.appendFileSync(filepath, row)
@@ -132,6 +152,7 @@ console.log('Running benchmark...')
 console.log(`  Samples: ${nSamples}`)
 console.log(`  Iterations per sample: ${nIterations}`)
 console.log(`  Test cases: ${testcases.length}`)
+if (details) console.log(`  Details: ${details}`)
 console.log('')
 
 const result = runBenchmark()
