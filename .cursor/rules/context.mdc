@@ -79,6 +79,29 @@ Before and after performance optimizations:
 
 3. **Manual benchmark**: `node benchmark.js` - runs benchmark and logs to CSV
 
+### Benchmark Log Format
+
+The `benchmark-log.csv` tracks performance history with these columns:
+
+| Column | Description |
+|--------|-------------|
+| datetime | Timestamp in YYYYMMDD-HHMMSS format |
+| branch_name | Git branch being benchmarked |
+| sample | Number of sample runs (default: 10) |
+| iterations_per_sample | Iterations per sample (default: 10000) |
+| test_cases | Number of test cases used |
+| mean | Average execution time in ms |
+| std | Standard deviation in ms |
+| min | Minimum execution time in ms |
+| max | Maximum execution time in ms |
+
+### Interpreting Results
+
+- Lower `mean` values indicate better performance
+- Compare branches by looking at `mean` values for the same test configuration
+- High `std` values suggest inconsistent performance
+- Use `min` for best-case performance comparison
+
 ## Post-Work
 
 After implementing a feature:
