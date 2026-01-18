@@ -7,6 +7,7 @@ node_modules
 bower_components
 
 # test
+testcases.csv
 coverage
 .nyc_output
 lighthouse
@@ -17,12 +18,5 @@ reports
 # OS
 .DS_Store
 
-# log
-*.log
-
-# misc
-*.xlsx
-*.csv
-
-# dist
-index.d.ts
+# benchmark
+benchmark-log.csv
