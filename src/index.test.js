@@ -30,10 +30,17 @@ function groupBy (arr, key) {
 
 const groupedTestCases = groupBy(googleSheetTestCases, groupedTestCasesKey)
 
-// TODO: to be implemented
-describe('num2Word', () => {
-  test('test', () => {
-    expect(true).toBeTruthy()
+describe('bahttext grammar anchors', () => {
+  test('tens, ed, and million via public API', () => {
+    expect(bahttext(10)).toBe('สิบบาทถ้วน')
+    expect(bahttext(20)).toBe('ยี่สิบบาทถ้วน')
+    expect(bahttext(21)).toBe('ยี่สิบเอ็ดบาทถ้วน')
+    expect(bahttext(31)).toBe('สามสิบเอ็ดบาทถ้วน')
+    expect(bahttext(101)).toBe('หนึ่งร้อยหนึ่งบาทถ้วน')
+    expect(bahttext(111)).toBe('หนึ่งร้อยสิบเอ็ดบาทถ้วน')
+    expect(bahttext(201)).toBe('สองร้อยหนึ่งบาทถ้วน')
+    expect(bahttext(1000000)).toBe('หนึ่งล้านบาทถ้วน')
+    expect(bahttext(1000001)).toBe('หนึ่งล้านหนึ่งบาทถ้วน')
   })
 })
 
