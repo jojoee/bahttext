@@ -1,5 +1,6 @@
 ---
-description: Systematic performance optimization with benchmark validation
+name: perf-optimize
+description: Systematic performance optimization with benchmark validation for bahttext.
 ---
 
 # Performance Optimization Workflow
@@ -22,8 +23,9 @@ Identify potential optimizations in the hot path. Common areas to consider:
 Before any changes, run benchmark on master branch:
 
 ```bash
-cd bahttext && git checkout master && node benchmark.js "baseline measurement"
-cd bahttext && git checkout perf/position-counter && node benchmark.js "use decrementing counter instead of modulo"
+git checkout master && node benchmark.js "baseline measurement"
+git checkout -b perf/<optimization-name>
+node benchmark.js "description of optimization idea"
 ```
 
 Record the baseline mean and std from `benchmark-log.csv`. Then manually update the `result` column to "baseline".
