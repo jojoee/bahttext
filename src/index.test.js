@@ -512,6 +512,20 @@ describe('bahttext', () => {
     expect(bahttext('0.10')).toBe('สิบสตางค์')
   })
 
+  test('fractional satang truncates toward zero to 2 digits', () => {
+    const cases = [
+      [1.005, 'หนึ่งบาทถ้วน'],
+      [1.015, 'หนึ่งบาทหนึ่งสตางค์'],
+      [1.999, 'หนึ่งบาทเก้าสิบเก้าสตางค์'],
+      [0.995, 'เก้าสิบเก้าสตางค์'],
+      [-1.999, 'ลบหนึ่งบาทเก้าสิบเก้าสตางค์']
+    ]
+    for (const [input, expected] of cases) {
+      expect(bahttext(input)).toBe(expected)
+      expect(bahttext(String(input))).toBe(expected)
+    }
+  })
+
   test('less than Number.MIN_SAFE_INTEGER', () => {
     const items = [1, 20, 9451, 5656549]
     for (let i = 0; i < items.length; i++) {

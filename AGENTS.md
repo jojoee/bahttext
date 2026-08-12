@@ -62,6 +62,7 @@ Before committing:
 - Accept number or numeric string only
 - Respect `Number.MIN_SAFE_INTEGER` … `Number.MAX_SAFE_INTEGER`
 - Never throw from the public API
+- Fractional satang: truncate toward zero to 2 digits (not half-up); default unchanged
 
 ## Development commands
 

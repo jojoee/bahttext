@@ -78,6 +78,7 @@ bahttext("-5.50") // ลบห้าบาทห้าสิบสตางค�
 - Accepts both number and string input
 - TypeScript declarations included
 - Invalid input returns "ศูนย์บาทถ้วน"
+- Fractional satang: truncate toward zero to 2 digits (not half-up)
 
 ## Reference
 
