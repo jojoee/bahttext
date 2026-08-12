@@ -5,6 +5,7 @@
 # dependency
 node_modules
 bower_components
+example/package-lock.json
 
 # test
 testcases.csv
