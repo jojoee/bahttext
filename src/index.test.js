@@ -506,6 +506,12 @@ describe('bahttext', () => {
     expect(bahttext('000.01')).toBe('หนึ่งสตางค์')
   })
 
+  test('string path whitespace and leading zeros', () => {
+    expect(bahttext(' 1234.56 ')).toBe('หนึ่งพันสองร้อยสามสิบสี่บาทห้าสิบหกสตางค์')
+    expect(bahttext('0007.00')).toBe('เจ็ดบาทถ้วน')
+    expect(bahttext('0.10')).toBe('สิบสตางค์')
+  })
+
   test('less than Number.MIN_SAFE_INTEGER', () => {
     const items = [1, 20, 9451, 5656549]
     for (let i = 0; i < items.length; i++) {
@@ -526,6 +532,7 @@ describe('bahttext', () => {
       for (let i = 0; i < testCases.length; i++) {
         const number = Number(testCases[i].number)
         expect(bahttext(number)).toBe(testCases[i].text)
+        expect(bahttext(testCases[i].number)).toBe(testCases[i].text)
       }
     })
   }
