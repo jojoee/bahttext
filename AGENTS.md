@@ -12,7 +12,6 @@ bahttext/
 │   └── index.test.js  # Jest tests
 ├── misc/              # Test data from Google Sheets
 ├── example/           # CommonJS, ES6, HTML examples
-├── doc/               # Multi-language README translations
 ├── .agents/skills/    # Agent skills (project)
 └── coverage/          # Test coverage reports
 ```
@@ -150,7 +149,7 @@ Before and after performance optimizations:
 
 After implementing a feature:
 
-1. Update [README.md](README.md) (Thai and English) for API or behavior changes
+1. Update [README.md](README.md) for API or behavior changes
 2. Update test cases in `misc/testcases.json` when needed
 3. Update `example/` when the API changes
 4. Commit with semantic-release prefixes (`feat:`, `fix:`, `docs:`, etc.)
