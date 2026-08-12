@@ -369,6 +369,11 @@ describe('handleStringInput', () => {
     expect(handleStringInput('12.34.56')).toBe(false)
     expect(handleStringInput('--123')).toBe(false)
     expect(handleStringInput('+-123')).toBe(false)
+    expect(handleStringInput('1e2')).toBe(false)
+    expect(handleStringInput('1E3')).toBe(false)
+    expect(handleStringInput('-2.5e1')).toBe(false)
+    expect(handleStringInput('1e')).toBe(false)
+    expect(handleStringInput('12.3E+1')).toBe(false)
   })
 
   test('should handle empty and whitespace strings as zero', () => {
@@ -484,6 +489,14 @@ describe('bahttext', () => {
     expect(bahttext('this-is-not-number')).toBe(zeroText)
     expect(bahttext('it-must-be-number-only')).toBe(zeroText)
     expect(bahttext('a123')).toBe(zeroText)
+  })
+
+  test('scientific-notation strings are invalid', () => {
+    const cases = ['1e2', '1E3', '-2.5e1', '1e', '12.3E+1']
+    for (const input of cases) {
+      expect(bahttext(input)).toBe(defaultResult)
+      expect(bahttext(input)).not.toContain('undefined')
+    }
   })
 
   test('leading with zero', () => {

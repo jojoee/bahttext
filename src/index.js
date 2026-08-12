@@ -139,6 +139,9 @@ function handleNumericInput (input) {
 function handleStringInput (input) {
   let formatted = input.trim()
 
+  // Scientific notation is invalid on the string path (digit walk would emit "undefined")
+  if (/[eE]/.test(formatted)) return false
+
   if (formatted.startsWith('-')) {
     formatted = formatted.replace(/^-0+/, '-') // keep sign, drop leading zeros
     if (formatted === '-') formatted = '0' // catch "-" or "-0"
