@@ -20,3 +20,6 @@ reports
 
 # benchmark
 benchmark-log.csv
+
+# local agent plans
+.agents/plans/
